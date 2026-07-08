@@ -1,0 +1,4 @@
+anthropic>=0.40.0
+python-substack>=0.1.7
+matplotlib>=3.8
+functions-framework>=3.5

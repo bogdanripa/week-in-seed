@@ -1,0 +1,33 @@
+"""
+config.py — all the knobs in one place. Secrets come from env / Secret Manager,
+never hard-coded here.
+"""
+import os
+
+CONFIG = {
+    "newsletter_name": "The Week in Seed",
+
+    # Firms whose early-stage activity we prioritise. "and alike" lives here —
+    # edit freely.
+    "tracked_firms": [
+        "Y Combinator", "Andreessen Horowitz (a16z)", "Sequoia Capital",
+        "General Catalyst", "Accel", "Lightspeed", "Greylock", "Kleiner Perkins",
+        "First Round", "Initialized", "SuperSeed", "Techstars",
+    ],
+
+    # Model + search budget for the research call.
+    "model": "claude-opus-4-8",
+    "max_searches": 12,
+
+    # Voice. Leave blank for a clean newsletter voice, or paste your own style
+    # guidance / the output of your `bogdan-voice` skill here to write as you.
+    "voice_instruction": "",
+
+    # Substack
+    "substack_publication_url": os.environ.get("SUBSTACK_PUBLICATION_URL", "https://YOURNAME.substack.com"),
+    "substack_cookies_path": os.environ.get("SUBSTACK_COOKIES_PATH"),  # preferred for headless
+    "auto_publish": os.environ.get("AUTO_PUBLISH", "false").lower() == "true",  # keep false in phase 1
+
+    # Output
+    "output_dir": os.environ.get("OUTPUT_DIR", "./output"),
+}
