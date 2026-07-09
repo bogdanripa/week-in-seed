@@ -49,11 +49,11 @@ Rules:
 - For every featured startup, capture two URLs while you research: the round's
   **announcement** (press release or the most credible coverage) and the
   company's **homepage**. Both get linked in the article (see step 2).
-- Cover the geography honestly. Run at least a couple of searches explicitly
-  targeting US / Silicon Valley deal flow, not just whatever surfaces first.
-  If the final selection ends up with no Bay Area startup, double-check that
-  this reflects the week rather than a search blind spot — and if it holds,
-  say so in the article as a deliberate observation, not by omission.
+- Search broadly across geographies (US / Silicon Valley, Europe, elsewhere)
+  so no region is a blind spot — but select purely on deal merit. Do NOT
+  favor Bay Area startups or add one to balance the geography. If the week's
+  selection skews notably (e.g. zero Bay Area rounds), that's fine — it's
+  worth a line as an observation, never a correction.
 - Target 3–5 featured companies. It's fine to include one just-past-seed round
   (e.g. an early Series A) if it anchors a theme — label the stage honestly.
 
