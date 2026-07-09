@@ -1,0 +1,5 @@
+# Only for Option B (self-hosted Cloud Run) — NOT needed by the routine.
+# functions-framework drags in flask -> blinker, which collides with
+# Debian-packaged blinker on stock containers and aborts pip installs.
+-r requirements.txt
+functions-framework>=3.5
