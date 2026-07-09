@@ -30,6 +30,11 @@ Cloud Run + Scheduler.
   `SUBSTACK_PUBLICATION_URL` in `.env` is unset. Until the routine's environment
   gets the env vars + `substack.com` on the allowed-domains list, runs will fall
   back to committing the article to the outcome branch instead of drafting.
+- 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
+  **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
+  Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
+  SKILL.md step 4 writes the cookies file from `SUBSTACK_SID` at runtime, so no
+  secret file needs to live in the repo or the environment.
 - 📌 Correction discovered during setup: the auth cookie is **`substack.sid`** (not
   `connect.sid`), and `python-substack` expects the cookies file as a **flat JSON
   dict** `{"name": "value"}`, not a browser-export array. The "Substack auth"

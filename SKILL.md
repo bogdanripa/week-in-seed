@@ -67,10 +67,20 @@ Then run: `python render_chart.py deals.json assets/header.png`
 
 - Write the article to `output/<YYYY-MM-DD>-digest.md` (header image first line,
   then `# title`, `### subtitle`, then body).
+- **Auth bootstrap:** if `SUBSTACK_COOKIES_PATH` is unset but `SUBSTACK_SID` is set
+  (the routine passes the cookie as an env var), write the cookies file first:
+  ```bash
+  printf '{"substack.sid": "%s"}' "$SUBSTACK_SID" > /tmp/substack_cookies.json
+  export SUBSTACK_COOKIES_PATH=/tmp/substack_cookies.json
+  ```
 - Create the Substack **draft** (do not auto-publish):
   `python publish_substack.py output/<YYYY-MM-DD>-digest.md assets/header.png`
 - If the publish step fails on a network/host error, the routine environment
   hasn't allowlisted `substack.com` — report that clearly instead of retrying.
+- If publishing is impossible (missing `SUBSTACK_SID`/`SUBSTACK_PUBLICATION_URL`,
+  blocked network), still deliver the work: copy the article to
+  `sample_output/<YYYY-MM-DD>-weekly-digest.md`, the chart to
+  `assets/<YYYY-MM-DD>-header.png`, and commit both.
 
 ## 5. Notify
 
