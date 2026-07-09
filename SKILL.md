@@ -105,6 +105,27 @@ Then run: `python render_chart.py deals.json assets/header.png`
 If a Telegram or Slack connector is available, send a one-line "draft ready" note
 with the Substack draft link. Otherwise just print the draft URL.
 
+## 6. Self-repair
+
+If anything errored or warned during this run (a script crash, a library API
+mismatch, a broken parse, a flaky path), **fix the code so the next run is
+cleaner** — don't just report it:
+
+- Diagnose the root cause, make the smallest targeted fix in the repo, and
+  **verify it** (re-run the failing command) before committing.
+- Push code fixes to `main` (`git push origin HEAD:main`) so future clones get
+  them. If pushing `main` is rejected, commit the fix to the outcome branch
+  instead and say so in the report so it can be merged by hand.
+- In the report, list every fix made: what failed, what changed, how you
+  verified it.
+
+Hard limits — self-repair is for plumbing, never for policy:
+- **Never** flip `AUTO_PUBLISH`/auto-publish behaviour — drafts only, always.
+- **Never** weaken editorial rules (accuracy, sourcing, dedupe, framework).
+- **Never** commit secrets (cookies, tokens, `.env`) or print their values.
+- Environment problems you cannot fix from inside (network allowlist, missing
+  env vars) get reported, not worked around.
+
 ## Guardrails
 - Accuracy over completeness. A short, correct digest beats a padded one.
 - Every number traces to a source you actually read this run.

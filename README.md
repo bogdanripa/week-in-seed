@@ -30,10 +30,14 @@ Cloud Run + Scheduler.
   a real draft (incl. header-image upload) from the sample article. Local secrets
   live in `.env` + `substack_cookies.json` (both gitignored). `python-substack`
   pinned to 0.1.25; `src/publish.py` image call fixed for that version's API.
-- ⚠️ **Routine environment still needs the env data** (claude.ai → Code →
-  Environments, UI-only): set `SUBSTACK_SID` + `SUBSTACK_PUBLICATION_URL` and add
-  `substack.com` / `*.substack.com` to Allowed domains. Until then, runs fall back
-  to committing the article to the outcome branch instead of drafting.
+- ✅ **Routine environment configured** (2026-07-09): `SUBSTACK_SID` +
+  `SUBSTACK_PUBLICATION_URL` env vars set. The first test run confirmed the
+  cookie bootstrap worked but the *Trusted* allowlist 403'd substack.com, so the
+  environment was switched to **full network access**.
+- ✅ **Self-repair policy** (2026-07-09, SKILL.md §6): if a run hits errors or
+  warnings, the routine fixes the code, verifies the fix, and pushes it to
+  `main` (fallback: the outcome branch) — with hard limits: never auto-publish,
+  never weaken editorial rules, never commit secrets.
 - 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
   **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
