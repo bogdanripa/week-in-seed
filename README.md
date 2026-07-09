@@ -39,11 +39,14 @@ Cloud Run + Scheduler.
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
   SKILL.md step 4 writes the cookies file from `SUBSTACK_SID` at runtime, so no
   secret file needs to live in the repo or the environment.
-- ✅ **Dedupe against past issues** (added 2026-07-09): every run now archives its
-  article to `sample_output/<date>-weekly-digest.md` (publish success or not), and
-  the research step first reads all past issues — on `main` and on
-  `claude/weekly-digest` — so a round already covered is never featured twice
-  (updates on material news are allowed, labelled as updates).
+- ✅ **Dedupe against past issues** (added 2026-07-09): `coverage.json` is a
+  committed rolling summary of the last 12 issues (themes + featured companies).
+  Every run reads it before researching (taking the freshest copy of `main` vs
+  the `claude/weekly-digest` outcome branch), archives its article to
+  `sample_output/`, and folds the new issue in via `update_coverage.py` — so a
+  round already covered is never featured twice (updates on material news are
+  allowed, labelled as updates). Wired into Option B too: `src/research.py`
+  injects the summary into the research prompt, `src/main.py` updates it.
 - 📌 Correction discovered during setup: the auth cookie is **`substack.sid`** (not
   `connect.sid`), and `python-substack` expects the cookies file as a **flat JSON
   dict** `{"name": "value"}`, not a browser-export array. The "Substack auth"
@@ -141,6 +144,9 @@ See `sample_output/2026-07-08-weekly-digest.md` for a real generated edition.
 | `SKILL.md` | Routine instructions: research method + framework + publish flow |
 | `render_chart.py` | CLI: `deals.json` → header PNG (routine calls this) |
 | `publish_substack.py` | CLI: markdown → Substack draft (routine calls this) |
+| `update_coverage.py` | CLI: folds a finished issue into `coverage.json` (routine calls this) |
+| `coverage.json` | Rolling last-12-issues summary (themes + companies) — the dedupe memory |
+| `src/coverage.py` | Parser + summary logic behind `update_coverage.py` (shared) |
 | `src/research.py` | Option B only: Anthropic call + `web_search` server tool |
 | `src/images.py` | Chart renderer (shared) |
 | `src/publish.py` | Markdown → Substack blocks; draft creation |

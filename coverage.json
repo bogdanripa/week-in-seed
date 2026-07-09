@@ -1,0 +1,35 @@
+{
+  "max_issues": 12,
+  "issues": [
+    {
+      "date": "2026-07-08",
+      "title": "The Week in Seed: Capital Is Buying Machines Senses",
+      "themes": [
+        "Theme 1 — Physical AI for the real economy",
+        "Theme 2 — Deep-tech infrastructure (the long-duration bets)"
+      ],
+      "companies": [
+        {
+          "name": "Hive",
+          "round": "$15M seed (led by SuperSeed)",
+          "theme": "Theme 1 — Physical AI for the real economy"
+        },
+        {
+          "name": "Omen AI",
+          "round": "$31M Series A (led by Nava Ventures)",
+          "theme": "Theme 1 — Physical AI for the real economy"
+        },
+        {
+          "name": "Zeroth",
+          "round": "~$74M pre-Series A",
+          "theme": "Theme 1 — Physical AI for the real economy"
+        },
+        {
+          "name": "MagiQware",
+          "round": "€575K pre-seed",
+          "theme": "Theme 2 — Deep-tech infrastructure (the long-duration bets)"
+        }
+      ]
+    }
+  ]
+}

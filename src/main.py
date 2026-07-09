@@ -55,6 +55,10 @@ def run(dry_run: bool = False) -> dict:
     with open(os.path.join(out_dir, f"{stamp}-article.json"), "w") as f:
         json.dump(article, f, indent=2)
 
+    print("      updating coverage.json (dedupe summary)…")
+    import coverage
+    coverage.update(md_path, stamp, CONFIG["coverage_path"])
+
     if dry_run:
         print(f"[4/4] dry-run: skipped Substack. Output in {out_dir}")
         return {"status": "dry_run", "markdown": md_path, "image": img_path}

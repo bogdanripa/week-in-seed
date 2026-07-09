@@ -12,6 +12,7 @@ import datetime as dt
 from anthropic import Anthropic
 
 from config import CONFIG
+import coverage
 
 
 def _week_window(today: dt.date | None = None) -> tuple[str, str]:
@@ -67,6 +68,9 @@ def research_and_write(today: dt.date | None = None) -> dict:
         "Do enough searches to cover the major early-stage rounds; a single "
         "search is not enough. Then return the JSON object."
     )
+    dedupe = coverage.summary_for_prompt(CONFIG["coverage_path"])
+    if dedupe:
+        user += "\n\n" + dedupe
 
     resp = client.messages.create(
         model=CONFIG["model"],

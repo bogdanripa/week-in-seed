@@ -30,4 +30,7 @@ CONFIG = {
 
     # Output
     "output_dir": os.environ.get("OUTPUT_DIR", "./output"),
+
+    # Rolling last-N-issues summary (committed to the repo) used for dedupe.
+    "coverage_path": os.environ.get("COVERAGE_PATH", "coverage.json"),
 }
