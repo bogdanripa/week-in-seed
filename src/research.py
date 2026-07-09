@@ -53,6 +53,7 @@ Return ONLY a JSON object, no markdown fences, matching exactly:
 {{
   "title": "string, <= 70 chars",
   "subtitle": "string, one line",
+  "header_photo_query": "string, 2-5 concrete words naming a real photographable scene matching the week's dominant theme (e.g. 'robotic arm factory floor') — never an abstraction",
   "body_markdown": "string, the full article in Markdown (no H1 title; start at ## sections)",
   "chart": {{
      "caption": "string",

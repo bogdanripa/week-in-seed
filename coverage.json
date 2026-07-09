@@ -1,36 +1,4 @@
 {
   "max_issues": 12,
-  "issues": [
-    {
-      "date": "2026-07-09",
-      "title": "The Week in Seed: Seed Checks Are Buying Finished Companies",
-      "themes": [
-        "Stealth ends at \"operational\" now",
-        "AI-native means rebuilding the plumbing",
-        "The robot data supply chain"
-      ],
-      "companies": [
-        {
-          "name": "Monogram",
-          "round": "$40M seed (led by DST Global and Lux Capital)",
-          "theme": "Stealth ends at \"operational\" now"
-        },
-        {
-          "name": "Arkenstone Defense",
-          "round": "$35M seed (led by J2 Ventures)",
-          "theme": "Stealth ends at \"operational\" now"
-        },
-        {
-          "name": "a1mobile",
-          "round": "$11.5M seed (led by General Catalyst)",
-          "theme": "AI-native means rebuilding the plumbing"
-        },
-        {
-          "name": "Worldmodeldata",
-          "round": "£7M seed (led by Iona Star Capital)",
-          "theme": "The robot data supply chain"
-        }
-      ]
-    }
-  ]
+  "issues": []
 }

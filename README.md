@@ -2,7 +2,7 @@
 
 Every week: research the latest **seed / pre-seed** rounds from top firms (YC & alike),
 analyse them **by investment theme** with a per-startup framework (Problem · Product ·
-Customer · Stage · TAM · Moat), render an abstract-art header image, and drop a
+Customer · Stage · TAM · Moat), fetch a real photographic header image, and drop a
 **draft** into Substack for one-click review-and-publish.
 
 Two ways to run it. **Option A (recommended): a Claude Code Routine** — no servers,
@@ -50,6 +50,11 @@ Cloud Run + Scheduler.
   scheduled run. Header images are no longer charts — `render_header.py`
   generates seeded abstract flow-field art (`header.json`: concept + mood);
   `render_chart.py`/`deals.json` are gone. Option B uses the same renderer.
+- ✅ **Photorealistic headers** (2026-07-09): headers are now real, openly
+  licensed photographs fetched from Openverse (`src/photos.py`; no API key) via
+  a concrete `photo_query` in `header.json` — public-domain/CC0 preferred,
+  CC-BY with an article credit line. The abstract art above remains only as a
+  fallback when the photo fetch fails.
 - 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
   **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
@@ -164,13 +169,14 @@ See `sample_output/2026-07-09-weekly-digest.md` for a real generated edition.
 | File | Role |
 |------|------|
 | `SKILL.md` | Routine instructions: research method + framework + publish flow |
-| `render_header.py` | CLI: `header.json` (concept + mood) → abstract-art header PNG (routine calls this) |
+| `render_header.py` | CLI: `header.json` (photo_query + concept) → real-photo header PNG, abstract-art fallback (routine calls this) |
 | `publish_substack.py` | CLI: markdown → Substack draft (routine calls this) |
 | `update_coverage.py` | CLI: folds a finished issue into `coverage.json` (routine calls this) |
 | `coverage.json` | Rolling last-12-issues summary (themes + companies) — the dedupe memory |
 | `src/coverage.py` | Parser + summary logic behind `update_coverage.py` (shared) |
 | `src/research.py` | Option B only: Anthropic call + `web_search` server tool |
-| `src/images.py` | Generative abstract-art renderer (shared) |
+| `src/photos.py` | Openverse photo fetcher: query → CC-licensed photo + attribution (shared) |
+| `src/images.py` | Generative abstract-art renderer (fallback, shared) |
 | `src/publish.py` | Markdown → Substack blocks; draft creation |
 | `src/main.py` | Option B orchestrator + Cloud Run handler |
 | `sample_output/` | This week's real generated edition |

@@ -13,6 +13,10 @@ description: >
 You are the research desk and lead writer for **The Week in Seed**, a newsletter
 covering **seed and pre-seed** venture funding. Run this end to end, autonomously.
 
+**This file is authoritative.** The routine's trigger prompt summarises an older
+version of this flow; wherever the two disagree (article structure, header
+style, framework fields), follow this file.
+
 ## 1. Research (use web search)
 
 Find seed / pre-seed / pre-Series-A rounds **announced in the last 7 days**,
@@ -100,18 +104,29 @@ or repeat the same TAM hedge word-for-word five times. If a
 
 ## 3. Render the header image
 
-Abstract art, **not** a chart or graph. Write `header.json`:
+Photorealistic and grounded in reality: the header is a **real photograph**
+(openly licensed, fetched from Openverse — no API key) of a concrete scene
+matching the week's dominant theme. Not abstract art, not a chart. Write
+`header.json`:
 
 ```json
-{"concept": "<one evocative sentence distilling the week's themes>",
+{"photo_query": "<2-5 concrete words naming a real, photographable scene>",
+ "concept": "<one evocative sentence distilling the week's themes>",
  "mood": "ember|deep|dawn|moss|solar|mist"}
 ```
 
-`concept` seeds the generative art (it is not drawn as text) — make it specific
-to this week so the image differs from past issues. `mood` is optional; pick
-one that fits the week's tone or omit it to let the seed decide.
+`photo_query` must name something that literally exists and can be photographed
+— "container ship port cranes", "robotic arm factory floor", "wheat field
+harvester" — never an abstraction ("growth", "innovation", "certainty").
+`concept` and optional `mood` only drive the legacy abstract-art fallback.
 
 Then run: `python render_header.py header.json assets/header.png`
+
+- On success the script writes `assets/header-credit.json`. If it prints that
+  attribution is REQUIRED (CC-BY photo), append the credit line it gives you
+  to the bottom of the article. Public-domain/CC0 photos need no credit.
+- If the photo fetch fails (network policy, no results), the script falls back
+  to the old generative art — say so in the run report; don't hide it.
 
 ## 4. Save + publish
 

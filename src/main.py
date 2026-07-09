@@ -19,6 +19,7 @@ import sys
 from config import CONFIG
 from research import research_and_write
 from images import abstract_header
+from photos import photo_header, PhotoError
 
 
 def run(dry_run: bool = False) -> dict:
@@ -29,10 +30,23 @@ def run(dry_run: bool = False) -> dict:
     print("[1/4] researching + writing…")
     article = research_and_write()
 
-    print("[2/4] rendering abstract header…")
+    print("[2/4] fetching header photo…")
     img_path = os.path.join(out_dir, f"{stamp}-header.png")
-    concept = f"{article['title']} — {article.get('subtitle', '')}"
-    abstract_header(concept, img_path)
+    credit = None
+    query = (article.get("header_photo_query") or "").strip()
+    if query:
+        try:
+            credit = photo_header(query, img_path)
+            print(f"      photo: \"{credit['title']}\" by {credit['creator']} ({credit['license']})")
+        except PhotoError as e:
+            print(f"      [warn] photo fetch failed ({e}) — abstract-art fallback")
+    if credit is None:
+        concept = f"{article['title']} — {article.get('subtitle', '')}"
+        abstract_header(concept, img_path)
+    elif credit["attribution_required"]:
+        article["body_markdown"] += (
+            f"\n\n*Header photo: \"{credit['title']}\" by {credit['creator']}, "
+            f"[{credit['license']}]({credit['license_url']}), via [Openverse]({credit['source_url']}).*")
 
     print("[3/4] saving markdown…")
     md_path = os.path.join(out_dir, f"{stamp}-digest.md")
