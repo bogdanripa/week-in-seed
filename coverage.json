@@ -1,4 +1,41 @@
 {
   "max_issues": 12,
-  "issues": []
+  "issues": [
+    {
+      "date": "2026-07-09",
+      "title": "The Week in Seed: VCs Are Buying Certainty, Not Just Upside",
+      "themes": [
+        "Physical AI's unglamorous supply chain",
+        "Buying certainty before you spend it",
+        "Deep tech's other frontier: food"
+      ],
+      "companies": [
+        {
+          "name": "Mowito",
+          "round": "$3M pre-seed (led by Version One Ventures)",
+          "theme": "Physical AI's unglamorous supply chain"
+        },
+        {
+          "name": "Worldmodeldata",
+          "round": "£7M seed (led by Iona Star Capital)",
+          "theme": "Physical AI's unglamorous supply chain"
+        },
+        {
+          "name": "Talp",
+          "round": "pre-seed, amount not disclosed (led by Formus Capital)",
+          "theme": "Buying certainty before you spend it"
+        },
+        {
+          "name": "Arkenstone Defense",
+          "round": "$35M seed (led by J2 Ventures)",
+          "theme": "Buying certainty before you spend it"
+        },
+        {
+          "name": "Aardaia",
+          "round": "€5M seed, oversubscribed (led by Point Nine)",
+          "theme": "Deep tech's other frontier: food"
+        }
+      ]
+    }
+  ]
 }
