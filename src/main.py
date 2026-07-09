@@ -18,7 +18,7 @@ import sys
 
 from config import CONFIG
 from research import research_and_write
-from images import header_chart
+from images import abstract_header
 
 
 def run(dry_run: bool = False) -> dict:
@@ -29,18 +29,10 @@ def run(dry_run: bool = False) -> dict:
     print("[1/4] researching + writing…")
     article = research_and_write()
 
-    print("[2/4] rendering header chart…")
+    print("[2/4] rendering abstract header…")
     img_path = os.path.join(out_dir, f"{stamp}-header.png")
-    chart = article.get("chart", {})
-    if chart.get("deals"):
-        header_chart(
-            deals=chart["deals"],
-            caption=chart.get("caption", "Source: public funding announcements"),
-            out_path=img_path,
-            title=f"Early-stage rounds — week of {article['_window']['start']}",
-        )
-    else:
-        img_path = None
+    concept = f"{article['title']} — {article.get('subtitle', '')}"
+    abstract_header(concept, img_path)
 
     print("[3/4] saving markdown…")
     md_path = os.path.join(out_dir, f"{stamp}-digest.md")

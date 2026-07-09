@@ -2,8 +2,8 @@
 
 Every week: research the latest **seed / pre-seed** rounds from top firms (YC & alike),
 analyse them **by investment theme** with a per-startup framework (Problem · Product ·
-Customer · Stage · TAM · Moat), render a header chart, and drop a **draft** into
-Substack for one-click review-and-publish.
+Customer · Stage · TAM · Moat), render an abstract-art header image, and drop a
+**draft** into Substack for one-click review-and-publish.
 
 Two ways to run it. **Option A (recommended): a Claude Code Routine** — no servers,
 runs on Anthropic's cloud on a weekly schedule. **Option B: self-hosted** on GCP
@@ -45,6 +45,11 @@ Cloud Run + Scheduler.
   dedupe step scans stray `claude/*` branches for archives that missed `main`.
   The run's July 9 issue was harvested from its branch, folded into
   `coverage.json`, and manually drafted to Substack (draft 206249898).
+- ✅ **Clean slate + abstract headers** (2026-07-09): all archived articles and
+  header images were removed and `coverage.json` reset for a clean first
+  scheduled run. Header images are no longer charts — `render_header.py`
+  generates seeded abstract flow-field art (`header.json`: concept + mood);
+  `render_chart.py`/`deals.json` are gone. Option B uses the same renderer.
 - 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
   **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
@@ -153,13 +158,13 @@ See `sample_output/2026-07-08-weekly-digest.md` for a real generated edition.
 | File | Role |
 |------|------|
 | `SKILL.md` | Routine instructions: research method + framework + publish flow |
-| `render_chart.py` | CLI: `deals.json` → header PNG (routine calls this) |
+| `render_header.py` | CLI: `header.json` (concept + mood) → abstract-art header PNG (routine calls this) |
 | `publish_substack.py` | CLI: markdown → Substack draft (routine calls this) |
 | `update_coverage.py` | CLI: folds a finished issue into `coverage.json` (routine calls this) |
 | `coverage.json` | Rolling last-12-issues summary (themes + companies) — the dedupe memory |
 | `src/coverage.py` | Parser + summary logic behind `update_coverage.py` (shared) |
 | `src/research.py` | Option B only: Anthropic call + `web_search` server tool |
-| `src/images.py` | Chart renderer (shared) |
+| `src/images.py` | Generative abstract-art renderer (shared) |
 | `src/publish.py` | Markdown → Substack blocks; draft creation |
 | `src/main.py` | Option B orchestrator + Cloud Run handler |
 | `sample_output/` | This week's real generated edition |

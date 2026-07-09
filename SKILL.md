@@ -72,17 +72,20 @@ Voice: punchy, opinionated, investor-grade. Lead with the answer, no throat-clea
 Press on moats — name the underwriting question, don't cheerlead. If a
 `voice-guide.md` exists in the repo, follow it.
 
-## 3. Render the header chart
+## 3. Render the header image
 
-Write the featured deals to `deals.json`:
+Abstract art, **not** a chart or graph. Write `header.json`:
 
 ```json
-{"title": "Early-stage rounds — week of <Mon date>",
- "caption": "Source: <the outlets you actually used>",
- "deals": [{"label": "Company (stage)", "amount_musd": 15}, ...]}
+{"concept": "<one evocative sentence distilling the week's themes>",
+ "mood": "ember|deep|dawn|moss|solar|mist"}
 ```
 
-Then run: `python render_chart.py deals.json assets/header.png`
+`concept` seeds the generative art (it is not drawn as text) — make it specific
+to this week so the image differs from past issues. `mood` is optional; pick
+one that fits the week's tone or omit it to let the seed decide.
+
+Then run: `python render_header.py header.json assets/header.png`
 
 ## 4. Save + publish
 
