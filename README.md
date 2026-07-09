@@ -22,7 +22,7 @@ Cloud Run + Scheduler.
   First run: Monday 2026-07-13. Manage it at `claude.ai/code/routines`.
 - ✅ Routine clones this repo as its source and commits its output to the
   **`claude/weekly-digest`** branch — so if Substack publishing fails, the finished
-  article + chart still land in `sample_output/` / `assets/` on that branch.
+  article + chart still land in `issues/` / `assets/` on that branch.
 - ✅ A local desktop-app scheduled task (`weekly-vc-digest`) was created first, then
   **disabled** in favour of the remote routine — it only ran while the app was open.
 - ✅ **Substack auth verified locally** (2026-07-09): `substack.sid` cookie works,
@@ -64,7 +64,7 @@ Cloud Run + Scheduler.
   committed rolling summary of the last 12 issues (themes + featured companies).
   Every run reads it before researching (taking the freshest copy of `main` vs
   the `claude/weekly-digest` outcome branch), archives its article to
-  `sample_output/`, and folds the new issue in via `update_coverage.py` — so a
+  `issues/`, and folds the new issue in via `update_coverage.py` — so a
   round already covered is never featured twice (updates on material news are
   allowed, labelled as updates). Wired into Option B too: `src/research.py`
   injects the summary into the research prompt, `src/main.py` updates it.
@@ -162,7 +162,7 @@ featured startup gets:
 Every company name links to its homepage and every round to its announcement —
 only URLs the research actually opened, never guessed.
 
-See `sample_output/2026-07-09-weekly-digest.md` for a real generated edition.
+See the latest edition in `issues/` for a real generated example.
 
 ## Files
 
@@ -179,7 +179,7 @@ See `sample_output/2026-07-09-weekly-digest.md` for a real generated edition.
 | `src/images.py` | Generative abstract-art renderer (fallback, shared) |
 | `src/publish.py` | Markdown → Substack blocks; draft creation |
 | `src/main.py` | Option B orchestrator + Cloud Run handler |
-| `sample_output/` | This week's real generated edition |
+| `issues/` | Archive of record: every published edition (formerly `sample_output/`) |
 
 ## Substack auth (both options)
 

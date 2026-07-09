@@ -4,7 +4,7 @@
 Folds the finished digest into coverage.json (rolling last-N summary used for
 dedupe) and prints the updated dedupe block.
 
-Usage: python update_coverage.py sample_output/2026-07-13-weekly-digest.md [YYYY-MM-DD]
+Usage: python update_coverage.py issues/2026-07-13-weekly-digest.md [YYYY-MM-DD]
 The date defaults to the YYYY-MM-DD prefix of the markdown filename.
 """
 import os

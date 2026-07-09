@@ -40,7 +40,7 @@ git fetch origin
 cat coverage.json
 # any archived issue on a claude/* branch that coverage.json doesn't know about?
 for b in $(git branch -r --format='%(refname:short)' | grep 'claude/'); do
-  git ls-tree -r --name-only "$b" sample_output/; done | sort -u
+  git ls-tree -r --name-only "$b" issues/ sample_output/; done | sort -u  # sample_output/ = legacy pre-rename path
 # for each <file> found whose date is missing from coverage.json:
 #   git checkout <branch> -- <file> && python update_coverage.py <file>
 ```
@@ -148,9 +148,9 @@ Then run: `python render_header.py header.json assets/header.png`
 - If the publish step fails on a network/host error, the routine environment
   hasn't allowlisted `substack.com` — report that clearly instead of retrying.
 - **Always archive** (publish success or not): copy the article to
-  `sample_output/<YYYY-MM-DD>-weekly-digest.md` and the chart to
+  `issues/<YYYY-MM-DD>-weekly-digest.md` and the chart to
   `assets/<YYYY-MM-DD>-header.png`, then fold the issue into the dedupe summary:
-  `python update_coverage.py sample_output/<YYYY-MM-DD>-weekly-digest.md`
+  `python update_coverage.py issues/<YYYY-MM-DD>-weekly-digest.md`
   Commit all three (article, chart, `coverage.json`) and **push straight to
   `main`**: `git push origin HEAD:main`. The platform's per-run outcome branch
   has an auto-generated name future runs can't predict, so `main` is the
