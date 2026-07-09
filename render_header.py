@@ -9,6 +9,7 @@ The art is generative (flow fields + glowing forms), seeded by the concept —
 same concept, same image; new week, new image. Not a chart, no text drawn.
 """
 import json
+import os
 import sys
 
 sys.path.insert(0, "src")
@@ -24,6 +25,9 @@ def main():
     mood = spec.get("mood")
     if mood is not None and mood not in PALETTES:
         raise SystemExit(f"unknown mood {mood!r}; pick one of {', '.join(PALETTES)} or omit it.")
+    out_dir = os.path.dirname(out_path)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)  # assets/ may be absent in a fresh clone
     abstract_header(spec["concept"], out_path, mood=mood)
     print(f"wrote {out_path}")
 
