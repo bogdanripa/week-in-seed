@@ -11,6 +11,32 @@ Cloud Run + Scheduler.
 
 ---
 
+## Status — 2026-07-09
+
+**Option A is live.** Decisions and current state:
+
+- ✅ Repo pushed to `github.com/bogdanripa/week-in-seed`.
+- ✅ **Remote routine created** via the claude.ai triggers API:
+  trigger `trig_0169n318LEV5fgxuGrvjYAqB`, cron `0 5 * * 1` (**UTC** — the API does
+  not track timezones, so this is 08:00 Bucharest in summer, 07:00 in winter).
+  First run: Monday 2026-07-13. Manage it at `claude.ai/code/routines`.
+- ✅ Routine clones this repo as its source and commits its output to the
+  **`claude/weekly-digest`** branch — so if Substack publishing fails, the finished
+  article + chart still land in `sample_output/` / `assets/` on that branch.
+- ✅ A local desktop-app scheduled task (`weekly-vc-digest`) was created first, then
+  **disabled** in favour of the remote routine — it only ran while the app was open.
+- ⚠️ **Substack auth is pending.** `substack_cookies.json` is scaffolded locally
+  (gitignored) but the auth cookie value is still a placeholder, and
+  `SUBSTACK_PUBLICATION_URL` in `.env` is unset. Until the routine's environment
+  gets the env vars + `substack.com` on the allowed-domains list, runs will fall
+  back to committing the article to the outcome branch instead of drafting.
+- 📌 Correction discovered during setup: the auth cookie is **`substack.sid`** (not
+  `connect.sid`), and `python-substack` expects the cookies file as a **flat JSON
+  dict** `{"name": "value"}`, not a browser-export array. The "Substack auth"
+  section below is updated accordingly.
+
+---
+
 ## Option A — run it as a Claude Code Routine  ★ recommended
 
 A routine is a saved Claude Code config (prompt + repo + connectors + trigger) that
@@ -110,10 +136,13 @@ See `sample_output/2026-07-08-weekly-digest.md` for a real generated edition.
 ## Substack auth (both options)
 
 No official publishing API. Export your session cookie once:
-1. Log into Substack → DevTools → Application → Cookies → copy `connect.sid`.
-2. Save `substack_cookies.json`:
-   `[{"name":"connect.sid","value":"<value>","domain":".substack.com","path":"/","secure":true}]`
+1. Log into **substack.com** (the root site, not just your publication's subdomain)
+   → DevTools → Application → Cookies → `https://substack.com` → copy the value of
+   **`substack.sid`** (HttpOnly, sorts near the bottom of the list).
+2. Save `substack_cookies.json` as a **flat dict** (what `python-substack` loads):
+   `{"substack.sid": "<value>"}`
 3. Point `SUBSTACK_COOKIES_PATH` at it. Valid for months, MFA-safe.
+   Analytics cookies (`_ga`, `__cf_bm`, `AWSALBTG`, …) are not needed and don't authenticate.
 
 ## Honest limits
 - **Substack is unofficial** (`python-substack` on internal endpoints) — pin the version.
