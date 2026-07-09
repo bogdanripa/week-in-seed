@@ -38,6 +38,13 @@ Cloud Run + Scheduler.
   warnings, the routine fixes the code, verifies the fix, and pushes it to
   `main` (fallback: the outcome branch) — with hard limits: never auto-publish,
   never weaken editorial rules, never commit secrets.
+- 📌 **Learned from the first real run** (2026-07-09): the platform pushes run
+  outcomes to an auto-generated `claude/*` branch (e.g.
+  `claude/eloquent-wozniak-7cx6ap`), ignoring the configured branch name. So
+  archives now push straight to `main` (`git push origin HEAD:main`), and the
+  dedupe step scans stray `claude/*` branches for archives that missed `main`.
+  The run's July 9 issue was harvested from its branch, folded into
+  `coverage.json`, and manually drafted to Substack (draft 206249898).
 - 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
   **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.

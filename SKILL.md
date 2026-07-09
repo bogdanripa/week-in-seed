@@ -21,14 +21,19 @@ General Catalyst, Accel, Lightspeed, Greylock, Kleiner Perkins, First Round,
 Initialized, SuperSeed) and accelerators (YC, Techstars, a16z Speedrun).
 
 **First, read `coverage.json` — no duplicates.** It is the committed rolling
-summary of the last N issues (dates, themes, featured companies). The routine
-commits to the `claude/weekly-digest` outcome branch, so that copy may be newer
-than the one on `main` — take the freshest:
+summary of the last N issues (dates, themes, featured companies). The copy on
+`main` is authoritative (step 4 pushes archives to `main`). But a previous run
+may have failed to push `main` and left its archive on an auto-generated
+`claude/*` branch — check for stragglers and fold them in:
 
 ```bash
-git fetch origin claude/weekly-digest 2>/dev/null && \
-  git checkout origin/claude/weekly-digest -- coverage.json 2>/dev/null
+git fetch origin
 cat coverage.json
+# any archived issue on a claude/* branch that coverage.json doesn't know about?
+for b in $(git branch -r --format='%(refname:short)' | grep 'claude/'); do
+  git ls-tree -r --name-only "$b" sample_output/; done | sort -u
+# for each <file> found whose date is missing from coverage.json:
+#   git checkout <branch> -- <file> && python update_coverage.py <file>
 ```
 
 A company already listed there is OUT — unless there is genuinely new, material
@@ -97,8 +102,11 @@ Then run: `python render_chart.py deals.json assets/header.png`
   `sample_output/<YYYY-MM-DD>-weekly-digest.md` and the chart to
   `assets/<YYYY-MM-DD>-header.png`, then fold the issue into the dedupe summary:
   `python update_coverage.py sample_output/<YYYY-MM-DD>-weekly-digest.md`
-  Commit all three (article, chart, `coverage.json`). The summary is what future
-  runs read to avoid featuring the same rounds twice.
+  Commit all three (article, chart, `coverage.json`) and **push straight to
+  `main`**: `git push origin HEAD:main`. The platform's per-run outcome branch
+  has an auto-generated name future runs can't predict, so `main` is the
+  archive of record; the outcome branch is only the fallback if that push is
+  rejected (flag it in the report if so).
 
 ## 5. Notify
 

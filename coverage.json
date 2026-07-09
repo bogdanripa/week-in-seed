@@ -30,6 +30,36 @@
           "theme": "Theme 2 — Deep-tech infrastructure (the long-duration bets)"
         }
       ]
+    },
+    {
+      "date": "2026-07-09",
+      "title": "The Week in Seed: Capital Is Chasing the Gatekeepers, Not the Users",
+      "themes": [
+        "Theme 1 — Vertical AI is swallowing specialized judgment work",
+        "Theme 2 — Selling infrastructure to (and around) governments"
+      ],
+      "companies": [
+        {
+          "name": "Talp",
+          "round": "pre-seed, amount not disclosed (backed in part by the a16z Scout Fund)",
+          "theme": "Theme 1 — Vertical AI is swallowing specialized judgment work"
+        },
+        {
+          "name": "Octozi",
+          "round": "$3M seed (led by Surface Ventures)",
+          "theme": "Theme 1 — Vertical AI is swallowing specialized judgment work"
+        },
+        {
+          "name": "Arkenstone Defense",
+          "round": "$35M seed (led by J2 Ventures)",
+          "theme": "Theme 2 — Selling infrastructure to (and around) governments"
+        },
+        {
+          "name": "M1X Global",
+          "round": "$5.5M seed (led by Paradigm)",
+          "theme": "Theme 2 — Selling infrastructure to (and around) governments"
+        }
+      ]
     }
   ]
 }
