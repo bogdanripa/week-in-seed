@@ -20,6 +20,22 @@ prioritising rounds led by or involving top firms (Y Combinator, a16z, Sequoia,
 General Catalyst, Accel, Lightspeed, Greylock, Kleiner Perkins, First Round,
 Initialized, SuperSeed) and accelerators (YC, Techstars, a16z Speedrun).
 
+**First, read the archive — no duplicates.** Before searching, read every past
+issue so you never re-feature a round already covered:
+
+```bash
+ls sample_output/*.md                            # archive on the current branch
+git fetch origin claude/weekly-digest 2>/dev/null && \
+  git show origin/claude/weekly-digest -- 'sample_output/*.md' >/dev/null 2>&1 && \
+  git ls-tree -r --name-only origin/claude/weekly-digest sample_output/
+```
+
+Read them all (from both branches) and build the list of previously featured
+companies. A company already covered is OUT — unless there is genuinely new,
+material news (a new round, a pivot), in which case feature it as a clearly
+labelled **update**, never as a fresh discovery. Also avoid re-using last week's
+theme names verbatim; if the same theme recurs, say so and build on it.
+
 Rules:
 - Do **several** searches, not one. Cross-check each round against a primary or
   reputable secondary source. Never invent a round, firm, amount, quote, or TAM.
@@ -77,10 +93,10 @@ Then run: `python render_chart.py deals.json assets/header.png`
   `python publish_substack.py output/<YYYY-MM-DD>-digest.md assets/header.png`
 - If the publish step fails on a network/host error, the routine environment
   hasn't allowlisted `substack.com` — report that clearly instead of retrying.
-- If publishing is impossible (missing `SUBSTACK_SID`/`SUBSTACK_PUBLICATION_URL`,
-  blocked network), still deliver the work: copy the article to
-  `sample_output/<YYYY-MM-DD>-weekly-digest.md`, the chart to
-  `assets/<YYYY-MM-DD>-header.png`, and commit both.
+- **Always archive** (publish success or not): copy the article to
+  `sample_output/<YYYY-MM-DD>-weekly-digest.md` and the chart to
+  `assets/<YYYY-MM-DD>-header.png`, and commit both. The archive is what future
+  runs read to avoid featuring the same rounds twice.
 
 ## 5. Notify
 

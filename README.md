@@ -39,6 +39,11 @@ Cloud Run + Scheduler.
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
   SKILL.md step 4 writes the cookies file from `SUBSTACK_SID` at runtime, so no
   secret file needs to live in the repo or the environment.
+- ✅ **Dedupe against past issues** (added 2026-07-09): every run now archives its
+  article to `sample_output/<date>-weekly-digest.md` (publish success or not), and
+  the research step first reads all past issues — on `main` and on
+  `claude/weekly-digest` — so a round already covered is never featured twice
+  (updates on material news are allowed, labelled as updates).
 - 📌 Correction discovered during setup: the auth cookie is **`substack.sid`** (not
   `connect.sid`), and `python-substack` expects the cookies file as a **flat JSON
   dict** `{"name": "value"}`, not a browser-export array. The "Substack auth"
