@@ -104,9 +104,8 @@ def create_draft(article: dict, header_image_path: str | None = None) -> dict:
     if header_image_path:
         try:
             image = api.get_image(header_image_path)  # uploads, returns {"url": ...}
-            post.add({"type": "captionedImage", "content": [
-                {"type": "image2", "attrs": {"src": image["url"], "fullscreen": False,
-                                             "imageSize": "normal", "alt": article["title"]}}]})
+            # python-substack's Post.add() unpacks this dict into captioned_image(**kwargs)
+            post.add({"type": "captionedImage", "src": image["url"], "alt": article["title"]})
         except Exception as e:  # never let an image failure block the draft
             print(f"[warn] header image upload failed, continuing without it: {e}")
 

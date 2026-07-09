@@ -25,11 +25,15 @@ Cloud Run + Scheduler.
   article + chart still land in `sample_output/` / `assets/` on that branch.
 - ✅ A local desktop-app scheduled task (`weekly-vc-digest`) was created first, then
   **disabled** in favour of the remote routine — it only ran while the app was open.
-- ⚠️ **Substack auth is pending.** `substack_cookies.json` is scaffolded locally
-  (gitignored) but the auth cookie value is still a placeholder, and
-  `SUBSTACK_PUBLICATION_URL` in `.env` is unset. Until the routine's environment
-  gets the env vars + `substack.com` on the allowed-domains list, runs will fall
-  back to committing the article to the outcome branch instead of drafting.
+- ✅ **Substack auth verified locally** (2026-07-09): `substack.sid` cookie works,
+  publication is `https://bogdanripa.substack.com`, and an end-to-end test created
+  a real draft (incl. header-image upload) from the sample article. Local secrets
+  live in `.env` + `substack_cookies.json` (both gitignored). `python-substack`
+  pinned to 0.1.25; `src/publish.py` image call fixed for that version's API.
+- ⚠️ **Routine environment still needs the env data** (claude.ai → Code →
+  Environments, UI-only): set `SUBSTACK_SID` + `SUBSTACK_PUBLICATION_URL` and add
+  `substack.com` / `*.substack.com` to Allowed domains. Until then, runs fall back
+  to committing the article to the outcome branch instead of drafting.
 - 📌 The routine passes the cookie as a plain env var — set **`SUBSTACK_SID`** and
   **`SUBSTACK_PUBLICATION_URL`** in the routine's environment (claude.ai → Code →
   Environments) and add `substack.com` + `*.substack.com` to Allowed domains.
