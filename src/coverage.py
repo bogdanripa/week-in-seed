@@ -16,8 +16,9 @@ import re
 
 _THEME_RE = re.compile(r"^## +(.+?)\s*$")
 _COMPANY_RE = re.compile(r"^### +(.+?)\s*$")
+_MD_LINK_RE = re.compile(r"\[([^\]]+)\]\([^)]*\)")  # [text](url) -> text
 # ## sections that are article furniture, not investment themes
-_NON_THEME = re.compile(r"^(the pattern|what to watch)", re.IGNORECASE)
+_NON_THEME = re.compile(r"^(the pattern|what to watch|this week's trends)", re.IGNORECASE)
 
 
 def parse_article_md(md_text: str) -> dict:
@@ -43,8 +44,8 @@ def parse_article_md(md_text: str) -> dict:
             continue
         m = _COMPANY_RE.match(line)
         if m and current_theme is not None:
-            entry = m.group(1).strip()
-            # "Hive — $15M seed (led by SuperSeed)" -> name + round details
+            # "[Hive](https://...) — $15M seed (led by SuperSeed)" -> name + details
+            entry = _MD_LINK_RE.sub(r"\1", m.group(1).strip())
             name, _, details = (p.strip() for p in entry.partition("—"))
             companies.append({
                 "name": name or entry,

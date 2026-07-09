@@ -46,30 +46,56 @@ Rules:
   reputable secondary source. Never invent a round, firm, amount, quote, or TAM.
 - For every startup you'll feature, dig until you can fill the framework below.
   If you can't confirm a field, write "not disclosed" — don't guess.
+- For every featured startup, capture two URLs while you research: the round's
+  **announcement** (press release or the most credible coverage) and the
+  company's **homepage**. Both get linked in the article (see step 2).
+- Cover the geography honestly. Run at least a couple of searches explicitly
+  targeting US / Silicon Valley deal flow, not just whatever surfaces first.
+  If the final selection ends up with no Bay Area startup, double-check that
+  this reflects the week rather than a search blind spot — and if it holds,
+  say so in the article as a deliberate observation, not by omission.
 - Target 3–5 featured companies. It's fine to include one just-past-seed round
   (e.g. an early Series A) if it anchors a theme — label the stage honestly.
 
-## 2. Structure the article by INVESTMENT THEME
+## 2. Structure the article: TRENDS FIRST, deals as evidence
 
-Do **not** write a flat list of rounds. Group them into 1–3 themes (e.g. "Physical
-AI for the real economy", "Deep-tech infrastructure", "Vertical AI for X"). Open
-each theme with the thesis and a TAM anchor, then break down each company:
+Do **not** write a flat list of rounds, and do **not** save the analysis for the
+end. The trends are the story; the deals are the evidence supporting them.
+
+1. **Intro** — 2–3 sentences on what kind of week it was.
+2. **`## This week's trends`** — 2–3 numbered trends tying the week together,
+   each stated in a sentence or two. This is the old trailing "The pattern"
+   section promoted to the top of the article; do NOT also add a "The pattern"
+   section at the end. Keep this exact heading — coverage.json parsing skips
+   it by name.
+3. **One `##` section per trend** — open with the thesis and a TAM anchor, then
+   break down each deal as an example of the trend, using the framework below.
+4. **`## What to watch next week`** — short, at the end.
+
+Per-company framework:
 
 ```
-### <Company> — <amount> <stage> (led by <firm>)
+### [<Company>](<homepage URL>) — <amount> <stage> (led by <firm>)
 - **Problem:** what pain, for whom, why now
 - **Product:** what they actually built
-- **Customer:** who buys, named logos if disclosed
-- **Stage:** round + total raised + traction caveats (pilots vs paid, etc.)
+- **Customer:** the IDEAL customer profile — who this is built for (role,
+  company type, buying trigger) — not a list of current customer names.
+  Traction (paying customers, pilots, logos) belongs under Stage.
+- **Stage:** round + total raised + traction caveats (pilots vs paid, etc.),
+  ending with an inline link to the round's announcement — e.g.
+  "$3M pre-seed led by X ([announcement](https://...))"
 - **TAM:** size + source; give a RANGE and label analyst estimates as estimates
 - **Moat:** the real defensible asset (data, distribution, IP, timing) — be skeptical
 ```
 
-Then a **"The pattern"** section (2–3 numbered takeaways tying the themes together)
-and a short **"What to watch next week."**
+Linking rules: the company name in each `###` heading links to the company's
+homepage; each Stage bullet links to the round's announcement. Only link URLs
+you actually opened this run — never guess or reconstruct a URL.
 
 Voice: punchy, opinionated, investor-grade. Lead with the answer, no throat-clearing.
-Press on moats — name the underwriting question, don't cheerlead. If a
+Press on moats — name the underwriting question, don't cheerlead. Vary the
+phrasing between companies: don't open every Moat bullet with the same formula
+or repeat the same TAM hedge word-for-word five times. If a
 `voice-guide.md` exists in the repo, follow it.
 
 ## 3. Render the header image

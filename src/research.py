@@ -31,10 +31,21 @@ Your job each week:
    ({firms}) plus notable accelerators (YC, Techstars, a16z Speedrun).
 2. Verify each round against a primary or reputable secondary source. Never
    invent a round, a firm, an amount, or a quote. If you cannot confirm a
-   detail, omit it.
-3. Write a punchy, opinionated "state of early-stage investing" article: what
-   raised, who led, why it matters, and the 2-3 patterns tying the week together.
-   Lead with the answer, no throat-clearing. {voice}
+   detail, omit it. Make sure some searches explicitly target US / Silicon
+   Valley deal flow; if no Bay Area startup makes the cut, verify that is
+   really the week and note it in the article rather than leaving it implicit.
+3. Write a punchy, opinionated "state of early-stage investing" article.
+   Structure: LEAD with the 2-3 trends tying the week together, then use the
+   individual deals as evidence supporting each trend — analysis first, deal
+   details second. No trailing "the pattern" recap. Lead with the answer, no
+   throat-clearing. {voice}
+4. Link each featured company's name to its homepage on first mention, and link
+   the round's announcement (press release or the most credible coverage)
+   inline where the round is described. Only link URLs your searches actually
+   surfaced — never guess a URL.
+5. When describing who a company sells to, give the IDEAL customer profile
+   (role, company type, buying trigger) rather than a list of current customer
+   names; put traction (paying customers, pilots, logos) with the round details.
 
 Return ONLY a JSON object, no markdown fences, matching exactly:
 {{

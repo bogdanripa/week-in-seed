@@ -140,18 +140,24 @@ gcloud scheduler jobs create http week-in-seed-weekly \
 
 ## The article format (both options)
 
-Structured **by investment theme**, not a flat list. Each featured startup gets:
+**Trends first, deals as evidence** — the article opens with the 2–3 trends
+tying the week together, then each trend section presents its deals as
+supporting examples (not a flat list of rounds, and no trailing recap). Each
+featured startup gets:
 
 | Field | What it answers |
 |-------|-----------------|
 | Problem | the pain, for whom, why now |
 | Product | what they actually built |
-| Customer | who buys (named logos if disclosed) |
-| Stage | round + total raised + traction caveats |
+| Customer | the ideal customer profile (role, company type, buying trigger) |
+| Stage | round + total raised + traction caveats, linked to the announcement |
 | TAM | size + source, as a labelled analyst range |
 | Moat | the real defensible asset — data, distribution, IP, timing |
 
-See `sample_output/2026-07-08-weekly-digest.md` for a real generated edition.
+Every company name links to its homepage and every round to its announcement —
+only URLs the research actually opened, never guessed.
+
+See `sample_output/2026-07-09-weekly-digest.md` for a real generated edition.
 
 ## Files
 
