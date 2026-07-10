@@ -3,9 +3,9 @@ name: weekly-vc-digest
 description: >
   Produce the weekly "Week in Seed" investment digest. Use when running the
   scheduled routine (weekly) or when asked to draft this week's seed/pre-seed
-  roundup. Researches the week's early-stage rounds, analyses them by investment
-  theme with a per-startup framework, renders a header chart, and creates a
-  Substack draft.
+  roundup. Researches the week's early-stage rounds, writes a trends-first
+  analysis with a per-startup framework, fetches a real-photo header, and
+  creates a Substack draft.
 ---
 
 # Weekly VC Digest — routine skill
