@@ -3,8 +3,8 @@
 Usage: python publish_substack.py output/2026-07-08-digest.md assets/header.png
 Parses the markdown file back into title/subtitle/body and calls src/publish.py.
 """
-import sys, re
-sys.path.insert(0, "src")
+import sys, re, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "src"))
 from publish import create_draft
 
 def parse_md(path):

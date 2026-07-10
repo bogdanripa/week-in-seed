@@ -46,7 +46,9 @@ def create_draft(article: dict, header_image_path: str | None = None) -> dict:
     if header_image_path:
         try:
             image = api.get_image(header_image_path)  # uploads, returns {"url": ...}
-            post.captioned_image(src=image["url"], alt=article["title"])
+            # must go through Post.add: captioned_image() alone indexes
+            # draft_body["content"][-1], which IndexErrors on an empty draft
+            post.add({"type": "captionedImage", "src": image["url"], "alt": article["title"]})
         except Exception as e:  # never let an image failure block the draft
             print(f"[warn] header image upload failed, continuing without it: {e}")
 
