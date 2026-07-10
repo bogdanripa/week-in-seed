@@ -1,6 +1,6 @@
 ![header](../assets/header.png)
 
-# The Week in Seed
+# The Week in Seed: Seed Money Went for Plumbing, Not Chatbots
 
 ### Robots that learn by watching, telecoms and federal contracting rebuilt from scratch, and an AI app that refuses to type
 

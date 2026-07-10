@@ -71,6 +71,12 @@ Rules:
 Do **not** write a flat list of rounds, and do **not** save the analysis for the
 end. The trends are the story; the deals are the evidence supporting them.
 
+**Title & subtitle — specific to THIS week, never generic.** The H1 states the
+week's thesis: `The Week in Seed: <this week's specific claim>` (e.g. "Seed
+Money Went for Plumbing, Not Chatbots") — never the bare newsletter name. The
+subtitle adds the concrete particulars (what was funded, what changed). Test:
+if the title or subtitle could sit on any other week's issue, rewrite it.
+
 1. **Intro** — 2–3 sentences on what kind of week it was.
 2. **`## This week's trends`** — 2–3 numbered trends tying the week together,
    each stated in a sentence or two. This is the old trailing "The pattern"
