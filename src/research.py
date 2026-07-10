@@ -27,8 +27,10 @@ called "{name}" that covers SEED and PRE-SEED venture funding.
 
 Your job each week:
 1. Use web_search to find the seed / pre-seed / pre-Series-A rounds ANNOUNCED
-   in the target window, prioritising rounds led by or involving top firms
-   ({firms}) plus notable accelerators (YC, Techstars, a16z Speedrun).
+   in the target window. Look BROAD — no preferred list of firms. Judge each
+   round on its own signal: what the company builds and why now, round size
+   relative to stage, founder track record, and investor credibility
+   (established leads, serious strategics, notable angels — whoever they are).
 2. Verify each round against a primary or reputable secondary source. Never
    invent a round, a firm, an amount, or a quote. If you cannot confirm a
    detail, omit it. Search broadly across geographies (US / Silicon Valley,
@@ -72,7 +74,6 @@ def research_and_write(today: dt.date | None = None) -> dict:
     voice = CONFIG.get("voice_instruction", "").strip()
     system = SYSTEM.format(
         name=CONFIG["newsletter_name"],
-        firms=", ".join(CONFIG["tracked_firms"]),
         voice=voice or "Write in a clean, confident newsletter voice.",
     )
 

@@ -7,14 +7,6 @@ import os
 CONFIG = {
     "newsletter_name": "The Week in Seed",
 
-    # Firms whose early-stage activity we prioritise. "and alike" lives here —
-    # edit freely.
-    "tracked_firms": [
-        "Y Combinator", "Andreessen Horowitz (a16z)", "Sequoia Capital",
-        "General Catalyst", "Accel", "Lightspeed", "Greylock", "Kleiner Perkins",
-        "First Round", "Initialized", "SuperSeed", "Techstars",
-    ],
-
     # Model + search budget for the research call.
     "model": "claude-opus-4-8",
     "max_searches": 12,

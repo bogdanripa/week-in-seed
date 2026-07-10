@@ -24,10 +24,13 @@ before running any of the repo's scripts.
 
 ## 1. Research (use web search)
 
-Find seed / pre-seed / pre-Series-A rounds **announced in the last 7 days**,
-prioritising rounds led by or involving top firms (Y Combinator, a16z, Sequoia,
-General Catalyst, Accel, Lightspeed, Greylock, Kleiner Perkins, First Round,
-Initialized, SuperSeed) and accelerators (YC, Techstars, a16z Speedrun).
+Find seed / pre-seed / pre-Series-A rounds **announced in the last 7 days**.
+Look **broad** — there is no preferred list of firms. Judge each round on its
+own signal: what the company builds and why now, the round's size relative to
+its stage, the founders' track record, and the credibility of the investors
+(established leads, serious strategics, notable angels — whoever they are).
+A sharp round led by a fund you've never heard of beats a mediocre one with a
+marquee name attached.
 
 **First, read `coverage.json` — no duplicates.** It is the committed rolling
 summary of the last N issues (dates, themes, featured companies). The copy on
