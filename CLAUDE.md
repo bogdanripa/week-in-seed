@@ -7,6 +7,8 @@
 - `main` is also the archive of record for published issues (see SKILL.md
   step 4): each run's article, header image, and `coverage.json` update are
   committed and pushed straight to `main`.
-- Never flip `AUTO_PUBLISH` — Substack drafts only.
+- Publishing is DIRECT (no draft review) — a run's output emails subscribers.
+  Accuracy and sourcing rules are therefore non-negotiable; if a run can't
+  meet them, it publishes nothing (AUTO_PUBLISH=false → draft) and says so.
 - Article format and editorial rules live in `SKILL.md` (routine flow) and
   `src/research.py` (API flow). Keep the two in sync when changing either.

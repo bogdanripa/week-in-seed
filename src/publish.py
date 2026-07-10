@@ -1,9 +1,10 @@
 """
-publish.py — pushes the article to Substack as a DRAFT via `python-substack`
+publish.py — publishes the article to Substack via `python-substack`
 (the unofficial client; Substack has no official publishing API).
 
-Design choice: we create a draft and STOP. You review in the Substack editor and
-hit publish. Flip AUTO_PUBLISH=True in config only once you trust the pipeline.
+The post goes out DIRECTLY: draft created, tagged, then published (send=True
+emails subscribers). Set AUTO_PUBLISH=false in the environment to fall back
+to draft-only mode for testing.
 
 Auth: prefer a cookies file (the `substack.sid` cookie stays valid for months,
 best for headless runs). Falls back to email/password.
@@ -36,7 +37,8 @@ def _make_api() -> Api:
                publication_url=pub)
 
 
-def create_draft(article: dict, header_image_path: str | None = None) -> dict:
+def publish_article(article: dict, header_image_path: str | None = None,
+                    tags: list[str] | None = None) -> dict:
     api = _make_api()
     user_id = api.get_user_id()
 
@@ -49,19 +51,29 @@ def create_draft(article: dict, header_image_path: str | None = None) -> dict:
             # must go through Post.add: captioned_image() alone indexes
             # draft_body["content"][-1], which IndexErrors on an empty draft
             post.add({"type": "captionedImage", "src": image["url"], "alt": article["title"]})
-        except Exception as e:  # never let an image failure block the draft
+        except Exception as e:  # never let an image failure block the post
             print(f"[warn] header image upload failed, continuing without it: {e}")
 
     # api= lets the renderer upload any local images referenced in the markdown
     post.from_markdown(article["body_markdown"], api=api)
 
     draft = api.post_draft(post.get_draft())
-    draft_id = draft.get("id")
+    post_id = draft.get("id")
+
+    applied_tags = []
+    for tag in tags or []:
+        try:  # never let a tag failure block publishing
+            api.add_tag_to_post(post_id, tag)
+            applied_tags.append(tag)
+        except Exception as e:
+            print(f"[warn] tag {tag!r} failed: {e}")
 
     if CONFIG.get("auto_publish"):
-        api.prepublish_draft(draft_id)
-        api.publish_draft(draft_id)
-        print(f"[ok] PUBLISHED draft {draft_id}")
-    else:
-        print(f"[ok] DRAFT {draft_id} created — review at {CONFIG['substack_publication_url']}/publish/posts")
-    return {"draft_id": draft_id, "auto_published": bool(CONFIG.get("auto_publish"))}
+        api.prepublish_draft(post_id)
+        api.publish_draft(post_id)  # send=True — emails subscribers
+        print(f"[ok] PUBLISHED post {post_id} (tags: {', '.join(applied_tags) or 'none'})")
+        return {"post_id": post_id, "published": True, "tags": applied_tags}
+
+    print(f"[ok] DRAFT {post_id} created (AUTO_PUBLISH=false) — review at "
+          f"{CONFIG['substack_publication_url']}/publish/posts")
+    return {"post_id": post_id, "published": False, "tags": applied_tags}

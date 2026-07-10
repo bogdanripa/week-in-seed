@@ -57,6 +57,7 @@ Return ONLY a JSON object, no markdown fences, matching exactly:
   "subtitle": "string, one line, the concrete particulars of this week (what was funded, what changed) — not a generic tagline",
   "header_photo_query": "string, 2-5 concrete words naming the LEAD trend's literal subject as a photographable scene (e.g. 'robotic arm factory floor' for a robot-data week) — never an abstraction, never a generic tech-vibe scene (keyboards, microphones) that could headline any article",
   "body_markdown": "string, the full article in Markdown (no H1 title; start at ## sections)",
+  "tags": ["string — 3-6 Substack topic tags: evergreen ones (e.g. 'Venture Capital', 'Seed Funding', 'Startups', 'AI') plus this week's specific sectors (e.g. 'Defense Tech', 'Robotics')"],
   "chart": {{
      "caption": "string",
      "deals": [{{"label": "Company (stage)", "amount_musd": number}}]  // 3-6 confirmed rounds for the header chart

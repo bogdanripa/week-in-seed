@@ -2,8 +2,8 @@
 
 A Claude Code routine that, every Monday, researches the last 7 days of
 **seed / pre-seed** rounds, writes a trends-first analysis with a per-startup
-framework, fetches a real photographic header, and drops a **draft** into
-Substack for one-click review-and-publish. Every issue is archived to `main`.
+framework, fetches a real photographic header, and **publishes it to Substack**
+with topic tags. Every issue is archived to `main`.
 
 ## How it runs
 
@@ -17,7 +17,8 @@ Substack for one-click review-and-publish. Every issue is archived to `main`.
   and full network access.
 - All work lands directly on **`main`** (see `CLAUDE.md`): the article in
   `issues/`, the header in `assets/`, the dedupe memory in `coverage.json`.
-- Substack only ever gets a **draft** — publishing stays manual, always.
+- Publishing is **direct** — the run tags the post and sends it to subscribers.
+  Set `AUTO_PUBLISH=false` in the environment for draft-only test runs.
 
 ## The article format
 
@@ -46,16 +47,16 @@ See the latest edition in `issues/` for a real generated example.
 | File | Role |
 |------|------|
 | `SKILL.md` | The routine's instructions — research method, framework, publish flow |
-| `CLAUDE.md` | Repo working rules (work on `main`, drafts only, keep flows in sync) |
+| `CLAUDE.md` | Repo working rules (work on `main`, direct publish, keep flows in sync) |
 | `render_header.py` | CLI: `header.json` (photo_query + concept) → real-photo header PNG, abstract-art fallback |
-| `publish_substack.py` | CLI: markdown → Substack draft |
+| `publish_substack.py` | CLI: markdown (+ `--tags`) → published Substack post |
 | `update_coverage.py` | CLI: folds a finished issue into `coverage.json` |
 | `coverage.json` | Rolling last-12-issues summary (themes + companies) — the dedupe memory |
 | `issues/` | Archive of record: every published edition |
 | `src/photos.py` | Openverse photo fetcher: query → CC-licensed photo + attribution |
 | `src/images.py` | Generative abstract-art renderer (header fallback) |
 | `src/coverage.py` | Parser + summary logic behind `update_coverage.py` |
-| `src/publish.py` | Markdown → Substack blocks; draft creation |
+| `src/publish.py` | Markdown → Substack blocks; tagging + publishing |
 | `src/research.py`, `src/main.py` | API flow: same pipeline as one Anthropic `web_search` call (see below) |
 
 ## Substack auth
@@ -75,7 +76,7 @@ The same pipeline can run off-plan as a single Anthropic API call with the
 pip install -r requirements-gcp.txt
 cp .env.example .env && set -a && . ./.env && set +a
 python src/main.py --dry-run     # research + header + markdown, no Substack
-python src/main.py               # full run → Substack draft
+python src/main.py               # full run → published Substack post
 ```
 
 `Dockerfile` builds the Cloud Run image. Keep `src/research.py` in sync with

@@ -18,7 +18,7 @@ CONFIG = {
     # Substack
     "substack_publication_url": os.environ.get("SUBSTACK_PUBLICATION_URL", "https://YOURNAME.substack.com"),
     "substack_cookies_path": os.environ.get("SUBSTACK_COOKIES_PATH"),  # preferred for headless
-    "auto_publish": os.environ.get("AUTO_PUBLISH", "false").lower() == "true",  # keep false in phase 1
+    "auto_publish": os.environ.get("AUTO_PUBLISH", "true").lower() == "true",  # direct publish; set false for draft-only testing
 
     # Output
     "output_dir": os.environ.get("OUTPUT_DIR", "./output"),

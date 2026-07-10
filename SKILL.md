@@ -2,10 +2,10 @@
 name: weekly-vc-digest
 description: >
   Produce the weekly "Week in Seed" investment digest. Use when running the
-  scheduled routine (weekly) or when asked to draft this week's seed/pre-seed
+  scheduled routine (weekly) or when asked to produce this week's seed/pre-seed
   roundup. Researches the week's early-stage rounds, writes a trends-first
   analysis with a per-startup framework, fetches a real-photo header, and
-  creates a Substack draft.
+  publishes to Substack with tags.
 ---
 
 # Weekly VC Digest — routine skill
@@ -158,8 +158,13 @@ Then run: `python render_header.py header.json assets/header.png`
   printf '{"substack.sid": "%s"}' "$SUBSTACK_SID" > /tmp/substack_cookies.json
   export SUBSTACK_COOKIES_PATH=/tmp/substack_cookies.json
   ```
-- Create the Substack **draft** (do not auto-publish):
-  `python publish_substack.py output/<YYYY-MM-DD>-digest.md assets/header.png`
+- **Pick 3–6 Substack tags**: evergreen ones that fit every issue ("Venture
+  Capital", "Seed Funding", "Startups", "AI") plus this week's specific
+  sectors (e.g. "Defense Tech", "Robotics", "Fintech"). Reuse existing tag
+  names when the topic recurs — don't spawn near-duplicates.
+- **Publish directly** (this emails subscribers — there is no draft review, so
+  the accuracy rules above are non-negotiable):
+  `python publish_substack.py output/<YYYY-MM-DD>-digest.md assets/header.png --tags "Venture Capital,Seed Funding,<week-specific>"`
 - If the publish step fails on a network/host error, the routine environment
   hasn't allowlisted `substack.com` — report that clearly instead of retrying.
 - **Always archive** (publish success or not): copy the article to
@@ -174,10 +179,11 @@ Then run: `python render_header.py header.json assets/header.png`
 
 ## 5. Notify + report
 
-If a Telegram or Slack connector is available, send a one-line "draft ready" note
-with the Substack draft link. Otherwise just print the draft URL.
+If a Telegram or Slack connector is available, send a one-line "published" note
+with the post link. Otherwise just print the post URL.
 
-End the run with a report containing: the Substack draft URL (or the committed
+End the run with a report containing: the published Substack post URL and its
+tags (or the committed
 article path if publishing was skipped or failed, and why), the themes covered,
 the featured companies, the header photo credit (or a note that the abstract-art
 fallback was used), and any self-repair fixes made (what failed, what changed,
@@ -198,7 +204,9 @@ cleaner** — don't just report it:
   verified it.
 
 Hard limits — self-repair is for plumbing, never for policy:
-- **Never** flip `AUTO_PUBLISH`/auto-publish behaviour — drafts only, always.
+- **Never** change what gets sent: publishing is direct and emails subscribers,
+  so never publish anything that failed the accuracy/sourcing rules — when in
+  doubt, set AUTO_PUBLISH=false for that run, leave a draft, and say so.
 - **Never** weaken editorial rules (accuracy, sourcing, dedupe, framework).
 - **Never** commit secrets (cookies, tokens, `.env`) or print their values.
 - Environment problems you cannot fix from inside (network allowlist, missing

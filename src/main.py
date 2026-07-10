@@ -1,10 +1,10 @@
 """
 main.py — orchestrates the weekly run:
-    research -> header chart -> save markdown -> create Substack draft
+    research -> photo header -> save markdown -> publish to Substack (tagged)
 
 Run locally:
-    python src/main.py                 # full run (creates a Substack draft)
-    python src/main.py --dry-run       # research + chart + save, NO Substack call
+    python src/main.py                 # full run (publishes to Substack)
+    python src/main.py --dry-run       # research + header + save, NO Substack call
 
 Cloud Run: the module also exposes `handler(request)` for an HTTP trigger fired
 weekly by Cloud Scheduler.
@@ -69,9 +69,9 @@ def run(dry_run: bool = False) -> dict:
         print(f"[4/4] dry-run: skipped Substack. Output in {out_dir}")
         return {"status": "dry_run", "markdown": md_path, "image": img_path}
 
-    print("[4/4] creating Substack draft…")
-    from publish import create_draft  # imported late so dry-runs need no substack lib
-    result = create_draft(article, header_image_path=img_path)
+    print("[4/4] publishing to Substack…")
+    from publish import publish_article  # imported late so dry-runs need no substack lib
+    result = publish_article(article, header_image_path=img_path, tags=article.get("tags"))
     return {"status": "ok", "markdown": md_path, "image": img_path, **result}
 
 
