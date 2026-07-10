@@ -126,13 +126,19 @@ matching the week's dominant theme. Not abstract art, not a chart. Write
  "mood": "ember|deep|dawn|moss|solar|mist"}
 ```
 
-`photo_query` must name something that literally exists and can be photographed
-— "container ship port cranes", "robotic arm factory floor", "wheat field
-harvester" — never an abstraction ("growth", "innovation", "certainty").
-`concept` and optional `mood` only drive the legacy abstract-art fallback.
+`photo_query` must name the **lead trend's literal subject** — the thing the
+week's dominant theme is about, photographed: a defense-compliance week →
+"pentagon government contracting office"; a robot-data week → "robotic arm
+factory floor". Never an abstraction ("growth", "certainty"), and never a
+generic tech-vibe scene (microphones, keyboards, laptops) that could headline
+any article. `concept` and optional `mood` only drive the abstract-art fallback.
 
 Then run: `python render_header.py header.json assets/header.png`
 
+- **Look at the image before using it.** Open `assets/header.png` and check it
+  actually depicts the intended scene — Openverse matches loosely. If it's
+  off-topic, refine the query (more specific nouns, different angle on the
+  same trend) and re-run; iterate up to 2–3 times before settling.
 - On success the script writes `assets/header-credit.json`. If it prints that
   attribution is REQUIRED (CC-BY photo), append the credit line it gives you
   to the bottom of the article. Public-domain/CC0 photos need no credit.

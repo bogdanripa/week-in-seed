@@ -53,7 +53,7 @@ Return ONLY a JSON object, no markdown fences, matching exactly:
 {{
   "title": "string, <= 70 chars, format 'The Week in Seed: <this week's specific thesis>' — never the bare newsletter name; if it could headline any other week, rewrite it",
   "subtitle": "string, one line, the concrete particulars of this week (what was funded, what changed) — not a generic tagline",
-  "header_photo_query": "string, 2-5 concrete words naming a real photographable scene matching the week's dominant theme (e.g. 'robotic arm factory floor') — never an abstraction",
+  "header_photo_query": "string, 2-5 concrete words naming the LEAD trend's literal subject as a photographable scene (e.g. 'robotic arm factory floor' for a robot-data week) — never an abstraction, never a generic tech-vibe scene (keyboards, microphones) that could headline any article",
   "body_markdown": "string, the full article in Markdown (no H1 title; start at ## sections)",
   "chart": {{
      "caption": "string",
