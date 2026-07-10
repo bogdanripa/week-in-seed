@@ -1,41 +1,4 @@
 {
   "max_issues": 12,
-  "issues": [
-    {
-      "date": "2026-07-09",
-      "title": "The Week in Seed: Seed Money Went for Plumbing, Not Chatbots",
-      "themes": [
-        "AI-native rebuilds of the industries everyone stopped innovating on",
-        "The data land-grab has gone physical",
-        "The chat window is starting to look like a legacy interface"
-      ],
-      "companies": [
-        {
-          "name": "a1mobile",
-          "round": "$11.5M Seed (led by General Catalyst)",
-          "theme": "AI-native rebuilds of the industries everyone stopped innovating on"
-        },
-        {
-          "name": "Arkenstone Defense",
-          "round": "$35M Seed (led by J2 Ventures)",
-          "theme": "AI-native rebuilds of the industries everyone stopped innovating on"
-        },
-        {
-          "name": "Worldmodeldata",
-          "round": "£7M Seed (led by Iona Star Capital)",
-          "theme": "The data land-grab has gone physical"
-        },
-        {
-          "name": "Mowito",
-          "round": "$3M Pre-seed (led by Version One Ventures)",
-          "theme": "The data land-grab has gone physical"
-        },
-        {
-          "name": "Monogram",
-          "round": "$40M Seed (led by DST Global and Lux Capital)",
-          "theme": "The chat window is starting to look like a legacy interface"
-        }
-      ]
-    }
-  ]
+  "issues": []
 }
