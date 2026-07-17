@@ -36,6 +36,37 @@
           "theme": "Regulated markets, AI-native challengers"
         }
       ]
+    },
+    {
+      "date": "2026-07-17",
+      "title": "The Week in Seed: Investors Funded the Plumbing, Not the App",
+      "themes": [
+        "Enterprise seed money is buying control planes, not features",
+        "Robots need a data supply chain before they need smarter software",
+        "Space's bottleneck moved from launch cost to bandwidth"
+      ],
+      "companies": [
+        {
+          "name": "Oak",
+          "round": "$60M seed (co-led by Accel, CRV, and Greylock Partners)",
+          "theme": "Enterprise seed money is buying control planes, not features"
+        },
+        {
+          "name": "Thira",
+          "round": "$21M seed (led by Madrona)",
+          "theme": "Enterprise seed money is buying control planes, not features"
+        },
+        {
+          "name": "microagi",
+          "round": "$55M seed (led by Hummingbird)",
+          "theme": "Robots need a data supply chain before they need smarter software"
+        },
+        {
+          "name": "Ravee Optics",
+          "round": "$6M seed (led by BIG Capital)",
+          "theme": "Space's bottleneck moved from launch cost to bandwidth"
+        }
+      ]
     }
   ]
 }

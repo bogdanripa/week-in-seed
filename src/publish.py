@@ -60,11 +60,18 @@ def publish_article(article: dict, header_image_path: str | None = None,
     draft = api.post_draft(post.get_draft())
     post_id = draft.get("id")
 
+    # python-substack's add_tag_to_post matches existing tags case-sensitively,
+    # so "Venture Capital" doesn't match a stored "venture capital" and it
+    # tries (and fails) to create a duplicate. Resolve case-insensitively
+    # against what's already on the publication before adding.
+    existing_by_lower = {t["name"].lower(): t["name"] for t in (api.get_publication_post_tags() or [])}
+
     applied_tags = []
     for tag in tags or []:
+        resolved = existing_by_lower.get(tag.lower(), tag)
         try:  # never let a tag failure block publishing
-            api.add_tag_to_post(post_id, tag)
-            applied_tags.append(tag)
+            api.add_tag_to_post(post_id, resolved)
+            applied_tags.append(resolved)
         except Exception as e:
             print(f"[warn] tag {tag!r} failed: {e}")
 
