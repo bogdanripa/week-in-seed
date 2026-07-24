@@ -22,9 +22,12 @@ with topic tags. Every issue is archived to `main`.
 
 ## The article format
 
-**Trends first, deals as evidence** — the article opens with the 2–3 trends
-tying the week together, then each trend section presents its deals as
-supporting examples. Each featured startup gets:
+**A high-level trends essay, deals only as examples** — each trend gets a
+section of industry-level analysis (the shift, why now, who wins, a TAM
+anchor); the week's deals appear only as compact example blocks inside the
+trend they exemplify. Everything is said exactly once: no trend list up top,
+no recap at the end, deal facts only in the example blocks. Each featured
+startup gets:
 
 | Field | What it answers |
 |-------|-----------------|

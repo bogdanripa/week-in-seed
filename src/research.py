@@ -38,11 +38,17 @@ Your job each week:
    merit — never favor Bay Area startups or add one to balance geography. If
    the week skews notably (e.g. zero Bay Area rounds), a one-line observation
    is enough.
-3. Write a punchy, opinionated "state of early-stage investing" article.
-   Structure: LEAD with the 2-3 trends tying the week together, then use the
-   individual deals as evidence supporting each trend — analysis first, deal
-   details second. No trailing "the pattern" recap. Lead with the answer, no
-   throat-clearing. {voice}
+3. Write a punchy, opinionated HIGH-LEVEL trends essay — about what's shifting
+   in early-stage investing, not deal reporting. Structure: a 1-2 sentence
+   intro (no trend list, no company names), then one ## section per trend:
+   2-4 paragraphs of industry-level analysis (the shift, why now, who wins,
+   a TAM anchor — readable as insight even with the deal names deleted),
+   followed by the deal(s) exemplifying it as compact ### framework blocks
+   (Problem / Product / Customer / Stage / TAM / Moat). Close with a short
+   "## What to watch next week". Say everything exactly ONCE: no trend list
+   at the top, no recap at the end, deal facts (amount, lead, traction) only
+   in the ### heading and framework bullets — never re-narrated in prose.
+   Lead with the answer, no throat-clearing. {voice}
 4. Link each featured company's name to its homepage on first mention, and link
    the round's announcement (press release or the most credible coverage)
    inline where the round is described. Only link URLs your searches actually
@@ -54,7 +60,7 @@ Your job each week:
 Return ONLY a JSON object, no markdown fences, matching exactly:
 {{
   "title": "string, <= 70 chars, format 'The Week in Seed: <this week's specific thesis>' — never the bare newsletter name; if it could headline any other week, rewrite it",
-  "subtitle": "string, one line, the concrete particulars of this week (what was funded, what changed) — not a generic tagline",
+  "subtitle": "string, one line, the concrete particulars of this week (what was funded, what changed) — not a generic tagline, and not a deal-by-deal enumeration with amounts (those live in the framework blocks)",
   "header_photo_query": "string, 2-5 concrete words naming the LEAD trend's literal subject as a photographable scene (e.g. 'robotic arm factory floor' for a robot-data week) — never an abstraction, never a generic tech-vibe scene (keyboards, microphones) that could headline any article",
   "body_markdown": "string, the full article in Markdown (no H1 title; start at ## sections)",
   "tags": ["string — 3-6 Substack topic tags: evergreen ones (e.g. 'Venture Capital', 'Seed Funding', 'Startups', 'AI') plus this week's specific sectors (e.g. 'Defense Tech', 'Robotics')"],

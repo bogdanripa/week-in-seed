@@ -69,26 +69,35 @@ Rules:
 - Target 3–5 featured companies. It's fine to include one just-past-seed round
   (e.g. an early Series A) if it anchors a theme — label the stage honestly.
 
-## 2. Structure the article: TRENDS FIRST, deals as evidence
+## 2. Structure the article: a HIGH-LEVEL trends essay, deals only as examples
 
-Do **not** write a flat list of rounds, and do **not** save the analysis for the
-end. The trends are the story; the deals are the evidence supporting them.
+The article is about the **trends** — what's shifting in early-stage investing
+and why now. It is NOT deal reporting. Deals appear only as compact example
+blocks inside the trend they exemplify.
 
 **Title & subtitle — specific to THIS week, never generic.** The H1 states the
 week's thesis: `The Week in Seed: <this week's specific claim>` (e.g. "Seed
 Money Went for Plumbing, Not Chatbots") — never the bare newsletter name. The
-subtitle adds the concrete particulars (what was funded, what changed). Test:
-if the title or subtitle could sit on any other week's issue, rewrite it.
+subtitle adds the concrete particulars (what was funded, what changed) in one
+line — NOT a deal-by-deal enumeration with amounts; those live in the framework
+blocks. Test: if the title or subtitle could sit on any other week's issue,
+rewrite it.
 
-1. **Intro** — 2–3 sentences on what kind of week it was.
-2. **`## This week's trends`** — 2–3 numbered trends tying the week together,
-   each stated in a sentence or two. This is the old trailing "The pattern"
-   section promoted to the top of the article; do NOT also add a "The pattern"
-   section at the end. Keep this exact heading — coverage.json parsing skips
-   it by name.
-3. **One `##` section per trend** — open with the thesis and a TAM anchor, then
-   break down each deal as an example of the trend, using the framework below.
-4. **`## What to watch next week`** — short, at the end.
+1. **Intro** — 1–2 sentences on what kind of week it was. Do NOT enumerate the
+   trends and do NOT name any company here; the sections do that.
+2. **One `##` section per trend** (the heading names the trend). Open with 2–4
+   paragraphs of **high-level analysis**: the shift, why it's happening now,
+   who wins and loses, a TAM anchor. Write it at industry level — it should
+   read as insight even with the deal names deleted. Company names, amounts,
+   and deal specifics stay OUT of this prose. Then exemplify with this week's
+   deal(s) using the framework below.
+3. **`## What to watch next week`** — short, at the end.
+
+**Say everything exactly once.** No `## This week's trends` list at the top, no
+"The pattern" recap at the end, no previewing in the intro what a section says
+later. Deal facts (amount, lead firm, traction) live ONLY in the `###` heading
+and the framework bullets — never re-narrated in the trend prose or the intro.
+If the same idea appears in two places, delete one of them.
 
 Per-company framework:
 
