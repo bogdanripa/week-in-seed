@@ -67,6 +67,37 @@
           "theme": "Space's bottleneck moved from launch cost to bandwidth"
         }
       ]
+    },
+    {
+      "date": "2026-07-24",
+      "title": "The Week in Seed: AI Graduated From Advisor to Operator",
+      "themes": [
+        "AI seed money graduated from advisor to operator",
+        "Someone has to guard the code the new AI operators write",
+        "Space's infrastructure story moved from bandwidth to power"
+      ],
+      "companies": [
+        {
+          "name": "telli",
+          "round": "$15M seed (led by Redalpine)",
+          "theme": "AI seed money graduated from advisor to operator"
+        },
+        {
+          "name": "1872",
+          "round": "$15M seed (from private funds advised by The O.H.I.O. Fund)",
+          "theme": "AI seed money graduated from advisor to operator"
+        },
+        {
+          "name": "Ossprey",
+          "round": "$2.65M pre-seed (led by Episode 1 Ventures)",
+          "theme": "Someone has to guard the code the new AI operators write"
+        },
+        {
+          "name": "ORiS",
+          "round": "€4.5M pre-seed, €5.7M with a regional grant (led by Earlybird)",
+          "theme": "Space's infrastructure story moved from bandwidth to power"
+        }
+      ]
     }
   ]
 }
