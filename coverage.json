@@ -98,6 +98,37 @@
           "theme": "Space's infrastructure story moved from bandwidth to power"
         }
       ]
+    },
+    {
+      "date": "2026-07-31",
+      "title": "The Week in Seed: Robot Money Chased the Wheel, Not the Arm",
+      "themes": [
+        "Robots got capable faster than they got usable",
+        "An AI seed round showed up with revenue instead of a roadmap",
+        "Middle Eastern e-commerce got its back office funded, not its storefront"
+      ],
+      "companies": [
+        {
+          "name": "Enigma",
+          "round": "$71M seed (led by Index Ventures and Ribbit Capital)",
+          "theme": "Robots got capable faster than they got usable"
+        },
+        {
+          "name": "Kinematic Trees",
+          "round": "£585K pre-seed (backed by Haatch, D2N2, British Business Bank)",
+          "theme": "Robots got capable faster than they got usable"
+        },
+        {
+          "name": "Fish Audio",
+          "round": "$52M seed (led by Coreline Ventures and Capital Today)",
+          "theme": "An AI seed round showed up with revenue instead of a roadmap"
+        },
+        {
+          "name": "Fincart",
+          "round": "$2.8M seed (co-led by Launch Africa and Antler MENAP)",
+          "theme": "Middle Eastern e-commerce got its back office funded, not its storefront"
+        }
+      ]
     }
   ]
 }
