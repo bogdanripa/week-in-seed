@@ -129,6 +129,42 @@
           "theme": "Middle Eastern e-commerce got its back office funded, not its storefront"
         }
       ]
+    },
+    {
+      "date": "2026-08-07",
+      "title": "The Week in Seed: Founders Who Already Sold One Fintech Raised the Biggest Checks to Build the Next",
+      "themes": [
+        "The biggest seed checks went to founders rebuilding infrastructure they'd already sold once",
+        "Critical minerals got mined twice this week — once from the ground, once from the waste pile",
+        "A wildfire sensor doubles as a missile-warning system, and that's the business model"
+      ],
+      "companies": [
+        {
+          "name": "Decade",
+          "round": "$85M seed (led by Greenoaks, Benchmark, and Diffusion)",
+          "theme": "The biggest seed checks went to founders rebuilding infrastructure they'd already sold once"
+        },
+        {
+          "name": "Maximum",
+          "round": "$30M seed (led by CRV)",
+          "theme": "The biggest seed checks went to founders rebuilding infrastructure they'd already sold once"
+        },
+        {
+          "name": "FAST Metals",
+          "round": "$4.3M pre-seed (led by New Climate Ventures)",
+          "theme": "Critical minerals got mined twice this week — once from the ground, once from the waste pile"
+        },
+        {
+          "name": "LoopX",
+          "round": "$4.05M seed (led by BDC Seed Venture Fund and Orion Industrial Ventures)",
+          "theme": "Critical minerals got mined twice this week — once from the ground, once from the waste pile"
+        },
+        {
+          "name": "Orbital Sentry",
+          "round": "pre-seed, amount not disclosed (led by Ridgeline)",
+          "theme": "A wildfire sensor doubles as a missile-warning system, and that's the business model"
+        }
+      ]
     }
   ]
 }
