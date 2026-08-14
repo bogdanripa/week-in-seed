@@ -165,6 +165,37 @@
           "theme": "A wildfire sensor doubles as a missile-warning system, and that's the business model"
         }
       ]
+    },
+    {
+      "date": "2026-08-14",
+      "title": "The Week in Seed: Someone Has to Cool AI Down and Keep Its Lights On",
+      "themes": [
+        "Seed money is starting to pay AI's own utility bill",
+        "AI's arms race is finally funding the defense side, not just the offense",
+        "A drone interceptor got a pre-seed check before it had a disclosed check size"
+      ],
+      "companies": [
+        {
+          "name": "Discovered Materials",
+          "round": "$9M seed (led by Lightspeed India Partners)",
+          "theme": "Seed money is starting to pay AI's own utility bill"
+        },
+        {
+          "name": "Reservoir",
+          "round": "$8M seed (led by Asymmetric Capital Partners)",
+          "theme": "Seed money is starting to pay AI's own utility bill"
+        },
+        {
+          "name": "Corma",
+          "round": "$60M seed (led by Sequoia Capital)",
+          "theme": "AI's arms race is finally funding the defense side, not just the offense"
+        },
+        {
+          "name": "KshatraLabs",
+          "round": "pre-seed, amount not disclosed (led by Finvolve and India Accelerator)",
+          "theme": "A drone interceptor got a pre-seed check before it had a disclosed check size"
+        }
+      ]
     }
   ]
 }
