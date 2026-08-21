@@ -196,6 +196,42 @@
           "theme": "A drone interceptor got a pre-seed check before it had a disclosed check size"
         }
       ]
+    },
+    {
+      "date": "2026-08-21",
+      "title": "The Week in Seed: The Checks Went to Whoever Already Had a Way In",
+      "themes": [
+        "Defense tech's frontier moved to where the primes don't go",
+        "Healthcare AI's seed money went to the access layer, not the assistant",
+        "Enterprise connectivity found a workaround instead of a rebuild"
+      ],
+      "companies": [
+        {
+          "name": "Terra Industries",
+          "round": "$52M seed (led by 8VC)",
+          "theme": "Defense tech's frontier moved to where the primes don't go"
+        },
+        {
+          "name": "Seitec",
+          "round": "AUS$4M seed (led by ACTivate Capital)",
+          "theme": "Defense tech's frontier moved to where the primes don't go"
+        },
+        {
+          "name": "Tross",
+          "round": "pre-seed, amount not disclosed (led by All In Capital)",
+          "theme": "Healthcare AI's seed money went to the access layer, not the assistant"
+        },
+        {
+          "name": "Aisel Health",
+          "round": "€1.7M pre-seed (led by Caesar Ventures)",
+          "theme": "Healthcare AI's seed money went to the access layer, not the assistant"
+        },
+        {
+          "name": "InfiniG",
+          "round": "$5.2M seed (co-led by J2 Ventures and Stormbreaker Ventures)",
+          "theme": "Enterprise connectivity found a workaround instead of a rebuild"
+        }
+      ]
     }
   ]
 }
