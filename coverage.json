@@ -232,6 +232,41 @@
           "theme": "Enterprise connectivity found a workaround instead of a rebuild"
         }
       ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "The Week in Seed: The Robots Didn't Get the Money — the Reactor, the Router and the Simulator Did",
+      "themes": [
+        "Physical AI's biggest checks went to power, compute and training — not to a single robot",
+        "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
+      ],
+      "companies": [
+        {
+          "name": "Apollo Atomics",
+          "round": "$31M seed (led by FCVC)",
+          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
+        },
+        {
+          "name": "Callosum",
+          "round": "$100M seed (led by Atomico)",
+          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
+        },
+        {
+          "name": "Veeda",
+          "round": "$90M seed (co-led by Khosla Ventures and Radical Ventures)",
+          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
+        },
+        {
+          "name": "Repodo",
+          "round": "€8.2M pre-seed (led by Hedosophia and Seed Capital)",
+          "theme": "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
+        },
+        {
+          "name": "Itoflow",
+          "round": "$2.5M pre-seed (led by Balderton Capital)",
+          "theme": "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
+        }
+      ]
     }
   ]
 }

@@ -78,8 +78,19 @@ def publish_article(article: dict, header_image_path: str | None = None,
     if CONFIG.get("auto_publish"):
         api.prepublish_draft(post_id)
         api.publish_draft(post_id)  # send=True — emails subscribers
-        print(f"[ok] PUBLISHED post {post_id} (tags: {', '.join(applied_tags) or 'none'})")
-        return {"post_id": post_id, "published": True, "tags": applied_tags}
+        # publish_draft's response doesn't reliably carry the slug, so look
+        # the post back up by id to build its canonical URL for the report.
+        post_url = None
+        try:
+            for p in api.get_published_posts(limit=5):
+                if p.get("id") == post_id:
+                    post_url = f"{CONFIG['substack_publication_url']}/p/{p['slug']}"
+                    break
+        except Exception as e:
+            print(f"[warn] could not resolve post URL: {e}")
+        print(f"[ok] PUBLISHED post {post_id} ({post_url or 'url unknown'}) "
+              f"(tags: {', '.join(applied_tags) or 'none'})")
+        return {"post_id": post_id, "url": post_url, "published": True, "tags": applied_tags}
 
     print(f"[ok] DRAFT {post_id} created (AUTO_PUBLISH=false) — review at "
           f"{CONFIG['substack_publication_url']}/publish/posts")
