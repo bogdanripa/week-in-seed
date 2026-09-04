@@ -82,7 +82,7 @@ def publish_article(article: dict, header_image_path: str | None = None,
         # the post back up by id to build its canonical URL for the report.
         post_url = None
         try:
-            for p in api.get_published_posts(limit=5):
+            for p in api.get_published_posts(limit=5).get("posts", []):
                 if p.get("id") == post_id:
                     post_url = f"{CONFIG['substack_publication_url']}/p/{p['slug']}"
                     break

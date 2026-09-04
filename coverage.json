@@ -267,6 +267,42 @@
           "theme": "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
         }
       ]
+    },
+    {
+      "date": "2026-09-04",
+      "title": "The Week in Seed: The Biggest Checks Went to Keeping AI Safe and Powered",
+      "themes": [
+        "This week's two largest seed checks funded AI's own supply chain, not a product people use",
+        "Autonomous agents earned exception-only authority this week — even inside US intelligence work",
+        "A real drone incident, not a pitch deck, made the case for this week's counter-drone round"
+      ],
+      "companies": [
+        {
+          "name": "Physical Superintelligence",
+          "round": "$58M seed (led by Breakthrough Energy Ventures)",
+          "theme": "This week's two largest seed checks funded AI's own supply chain, not a product people use"
+        },
+        {
+          "name": "Air",
+          "round": "$50M seed, in two tranches (led by Sequoia Capital, then Greenoaks)",
+          "theme": "This week's two largest seed checks funded AI's own supply chain, not a product people use"
+        },
+        {
+          "name": "Catch",
+          "round": "$5M seed (co-led by Entrée Capital and Pitango)",
+          "theme": "Autonomous agents earned exception-only authority this week — even inside US intelligence work"
+        },
+        {
+          "name": "Aslan",
+          "round": "$20.8M seed (co-led by Khosla Ventures and XYZ Venture Capital)",
+          "theme": "Autonomous agents earned exception-only authority this week — even inside US intelligence work"
+        },
+        {
+          "name": "INLEAP Photonics",
+          "round": "€20M seed (led by UVC Partners)",
+          "theme": "A real drone incident, not a pitch deck, made the case for this week's counter-drone round"
+        }
+      ]
     }
   ]
 }
