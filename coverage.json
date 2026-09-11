@@ -303,6 +303,31 @@
           "theme": "A real drone incident, not a pitch deck, made the case for this week's counter-drone round"
         }
       ]
+    },
+    {
+      "date": "2026-09-11",
+      "title": "The Week in Seed: The Money Followed Proof, Not Promises",
+      "themes": [
+        "Hardware seed rounds arrived with the institution already in the room",
+        "An AI agent proved it could run a business function before anyone had to take the pitch on faith"
+      ],
+      "companies": [
+        {
+          "name": "Bluecore Energy",
+          "round": "$50M seed (led by Silverton Partners)",
+          "theme": "Hardware seed rounds arrived with the institution already in the room"
+        },
+        {
+          "name": "KVector",
+          "round": "£3.8M seed (led by a consortium including Midlands Mindforge and Mercia Ventures)",
+          "theme": "Hardware seed rounds arrived with the institution already in the room"
+        },
+        {
+          "name": "Fluencify",
+          "round": "$4.3M pre-seed (led by byFounders)",
+          "theme": "An AI agent proved it could run a business function before anyone had to take the pitch on faith"
+        }
+      ]
     }
   ]
 }
