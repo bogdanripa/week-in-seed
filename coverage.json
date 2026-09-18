@@ -328,6 +328,36 @@
           "theme": "An AI agent proved it could run a business function before anyone had to take the pitch on faith"
         }
       ]
+    },
+    {
+      "date": "2026-09-18",
+      "title": "The Week in Seed: AI Agents Got Security Guards Before They Got a Killer App",
+      "themes": [
+        "Agentic AI Got Its Own Security Industry Before It Got a Killer App",
+        "Enterprise AI's Seed Money Split Between the Model and the Middleman"
+      ],
+      "companies": [
+        {
+          "name": "Eve Security",
+          "round": "$7.5M seed, extension (led by Run Ventures)",
+          "theme": "Agentic AI Got Its Own Security Industry Before It Got a Killer App"
+        },
+        {
+          "name": "FAZE Security",
+          "round": "$6M seed (led by New Era Capital Partners)",
+          "theme": "Agentic AI Got Its Own Security Industry Before It Got a Killer App"
+        },
+        {
+          "name": "TypeSafe AI",
+          "round": "$40M seed (led by DCVC)",
+          "theme": "Enterprise AI's Seed Money Split Between the Model and the Middleman"
+        },
+        {
+          "name": "Hang Ten Systems",
+          "round": "$53M seed extension (led by Xora)",
+          "theme": "Enterprise AI's Seed Money Split Between the Model and the Middleman"
+        }
+      ]
     }
   ]
 }
