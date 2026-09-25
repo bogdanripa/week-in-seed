@@ -358,6 +358,42 @@
           "theme": "Enterprise AI's Seed Money Split Between the Model and the Middleman"
         }
       ]
+    },
+    {
+      "date": "2026-09-25",
+      "title": "The Week in Seed: AI Money Went to Whoever Could Prove Their Work",
+      "themes": [
+        "Insurance Keeps Being AI's Best-Behaved Customer",
+        "Agents Are Getting Named Badges, Not Just API Keys",
+        "The New AI Product Is the Check, Not the Output"
+      ],
+      "companies": [
+        {
+          "name": "Soteris",
+          "round": "$8M seed (led by Spider Capital)",
+          "theme": "Insurance Keeps Being AI's Best-Behaved Customer"
+        },
+        {
+          "name": "Beagle Labs",
+          "round": "$4.1M pre-seed (led by Chingona Ventures)",
+          "theme": "Insurance Keeps Being AI's Best-Behaved Customer"
+        },
+        {
+          "name": "Ando",
+          "round": "$20M seed (led by Accel, Index Ventures and Emergence Capital)",
+          "theme": "Agents Are Getting Named Badges, Not Just API Keys"
+        },
+        {
+          "name": "Ekai",
+          "round": "$1.7M pre-seed (led by Misneach)",
+          "theme": "The New AI Product Is the Check, Not the Output"
+        },
+        {
+          "name": "F13",
+          "round": "$5M pre-seed (led by Credo Ventures and Point Nine Capital)",
+          "theme": "The New AI Product Is the Check, Not the Output"
+        }
+      ]
     }
   ]
 }
