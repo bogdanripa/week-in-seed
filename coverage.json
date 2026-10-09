@@ -2,37 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-07-17",
-      "title": "The Week in Seed: Investors Funded the Plumbing, Not the App",
-      "themes": [
-        "Enterprise seed money is buying control planes, not features",
-        "Robots need a data supply chain before they need smarter software",
-        "Space's bottleneck moved from launch cost to bandwidth"
-      ],
-      "companies": [
-        {
-          "name": "Oak",
-          "round": "$60M seed (co-led by Accel, CRV, and Greylock Partners)",
-          "theme": "Enterprise seed money is buying control planes, not features"
-        },
-        {
-          "name": "Thira",
-          "round": "$21M seed (led by Madrona)",
-          "theme": "Enterprise seed money is buying control planes, not features"
-        },
-        {
-          "name": "microagi",
-          "round": "$55M seed (led by Hummingbird)",
-          "theme": "Robots need a data supply chain before they need smarter software"
-        },
-        {
-          "name": "Ravee Optics",
-          "round": "$6M seed (led by BIG Capital)",
-          "theme": "Space's bottleneck moved from launch cost to bandwidth"
-        }
-      ]
-    },
-    {
       "date": "2026-07-24",
       "title": "The Week in Seed: AI Graduated From Advisor to Operator",
       "themes": [
@@ -382,6 +351,36 @@
           "name": "Foundational",
           "round": "£8.2M pre-seed (backed by Inflection, BACKED, Final Frontier, Adjacent and Type One Ventures; no lead disclosed)",
           "theme": "Space's next bottleneck is knowing exactly where everything is"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "title": "The Week in Seed: Before the Robots Ship, Someone Has to Test Them — and Before the Agents Scale, Someone Has to Have Customers",
+      "themes": [
+        "Robotics is growing a tooling layer: the testers and the sketch-pad copilots",
+        "AI agents are showing up in overlooked back offices with users already attached"
+      ],
+      "companies": [
+        {
+          "name": "SafeWorld",
+          "round": "$12.2M seed (co-led by Shine Capital and a16z Speedrun)",
+          "theme": "Robotics is growing a tooling layer: the testers and the sketch-pad copilots"
+        },
+        {
+          "name": "Hestus",
+          "round": "$7.4M seed (led by Insight Partners)",
+          "theme": "Robotics is growing a tooling layer: the testers and the sketch-pad copilots"
+        },
+        {
+          "name": "Polygrade",
+          "round": "$6.3M seed, disclosed on exiting stealth (latest $3M from Construct Capital)",
+          "theme": "AI agents are showing up in overlooked back offices with users already attached"
+        },
+        {
+          "name": "Finches",
+          "round": "€2M pre-seed (led by HTGF, co-led by Vanagon Ventures)",
+          "theme": "AI agents are showing up in overlooked back offices with users already attached"
         }
       ]
     }

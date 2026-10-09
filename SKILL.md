@@ -19,7 +19,7 @@ this file, follow this file. Also read `CLAUDE.md` (work directly on `main`).
 
 ## 0. Setup
 
-Fresh containers don't have the Python deps: `pip install -r requirements.txt`
+Fresh containers don't have the Python deps: `python -m pip install -r requirements.txt` (plain `pip` may belong to a different interpreter than `python`)
 before running any of the repo's scripts.
 
 ## 1. Research (use web search)
