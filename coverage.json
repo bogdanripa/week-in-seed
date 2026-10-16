@@ -2,37 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-07-24",
-      "title": "The Week in Seed: AI Graduated From Advisor to Operator",
-      "themes": [
-        "AI seed money graduated from advisor to operator",
-        "Someone has to guard the code the new AI operators write",
-        "Space's infrastructure story moved from bandwidth to power"
-      ],
-      "companies": [
-        {
-          "name": "telli",
-          "round": "$15M seed (led by Redalpine)",
-          "theme": "AI seed money graduated from advisor to operator"
-        },
-        {
-          "name": "1872",
-          "round": "$15M seed (from private funds advised by The O.H.I.O. Fund)",
-          "theme": "AI seed money graduated from advisor to operator"
-        },
-        {
-          "name": "Ossprey",
-          "round": "$2.65M pre-seed (led by Episode 1 Ventures)",
-          "theme": "Someone has to guard the code the new AI operators write"
-        },
-        {
-          "name": "ORiS",
-          "round": "€4.5M pre-seed, €5.7M with a regional grant (led by Earlybird)",
-          "theme": "Space's infrastructure story moved from bandwidth to power"
-        }
-      ]
-    },
-    {
       "date": "2026-07-31",
       "title": "The Week in Seed: Robot Money Chased the Wheel, Not the Arm",
       "themes": [
@@ -381,6 +350,42 @@
           "name": "Finches",
           "round": "€2M pre-seed (led by HTGF, co-led by Vanagon Ventures)",
           "theme": "AI agents are showing up in overlooked back offices with users already attached"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "title": "The Week in Seed: When AI Writes the Code, the Seed Money Goes to Whoever Tests It",
+      "themes": [
+        "Testing is becoming the bottleneck, so testing is becoming the product",
+        "Physical AI still runs on chips designed for something else",
+        "A banker's incentive problem is back as a seed-stage pitch"
+      ],
+      "companies": [
+        {
+          "name": "Klarent",
+          "round": "$8M seed (led by Mosaic Ventures)",
+          "theme": "Testing is becoming the bottleneck, so testing is becoming the product"
+        },
+        {
+          "name": "Shamrock AI",
+          "round": "$5M seed (led by Endiya Partners)",
+          "theme": "Testing is becoming the bottleneck, so testing is becoming the product"
+        },
+        {
+          "name": "CodeWall",
+          "round": "$4M pre-seed (led by Osney Capital)",
+          "theme": "Testing is becoming the bottleneck, so testing is becoming the product"
+        },
+        {
+          "name": "Ubitium",
+          "round": "$14M seed (led by Ibex Investors)",
+          "theme": "Physical AI still runs on chips designed for something else"
+        },
+        {
+          "name": "Matters",
+          "round": "$5M pre-seed (led by Swedish angel Jakob Johansson)",
+          "theme": "A banker's incentive problem is back as a seed-stage pitch"
         }
       ]
     }
