@@ -2,37 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-07-31",
-      "title": "The Week in Seed: Robot Money Chased the Wheel, Not the Arm",
-      "themes": [
-        "Robots got capable faster than they got usable",
-        "An AI seed round showed up with revenue instead of a roadmap",
-        "Middle Eastern e-commerce got its back office funded, not its storefront"
-      ],
-      "companies": [
-        {
-          "name": "Enigma",
-          "round": "$71M seed (led by Index Ventures and Ribbit Capital)",
-          "theme": "Robots got capable faster than they got usable"
-        },
-        {
-          "name": "Kinematic Trees",
-          "round": "£585K pre-seed (backed by Haatch, D2N2, British Business Bank)",
-          "theme": "Robots got capable faster than they got usable"
-        },
-        {
-          "name": "Fish Audio",
-          "round": "$52M seed (led by Coreline Ventures and Capital Today)",
-          "theme": "An AI seed round showed up with revenue instead of a roadmap"
-        },
-        {
-          "name": "Fincart",
-          "round": "$2.8M seed (co-led by Launch Africa and Antler MENAP)",
-          "theme": "Middle Eastern e-commerce got its back office funded, not its storefront"
-        }
-      ]
-    },
-    {
       "date": "2026-08-07",
       "title": "The Week in Seed: Founders Who Already Sold One Fintech Raised the Biggest Checks to Build the Next",
       "themes": [
@@ -386,6 +355,36 @@
           "name": "Matters",
           "round": "$5M pre-seed (led by Swedish angel Jakob Johansson)",
           "theme": "A banker's incentive problem is back as a seed-stage pitch"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "title": "The Week in Seed: The Bottleneck Moved From the Brain to the Fingertips and the Wiring",
+      "themes": [
+        "Machines are hitting a signal problem, not an intelligence problem",
+        "Seed rounds that arrive with a measured result"
+      ],
+      "companies": [
+        {
+          "name": "Enact Intelligence",
+          "round": "$30M pre-seed (no lead disclosed; investors include redalpine, Notion Capital and firstminute capital)",
+          "theme": "Machines are hitting a signal problem, not an intelligence problem"
+        },
+        {
+          "name": "Coherence Quantum",
+          "round": "€2.78M seed (led by Lifeline Ventures)",
+          "theme": "Machines are hitting a signal problem, not an intelligence problem"
+        },
+        {
+          "name": "IMIO",
+          "round": "$12M seed (led by Sofinnova Partners)",
+          "theme": "Seed rounds that arrive with a measured result"
+        },
+        {
+          "name": "ArtMaster (Artie)",
+          "round": "$2.4M seed (investors include Factorial Capital, Reflex Capital and Moises)",
+          "theme": "Seed rounds that arrive with a measured result"
         }
       ]
     }
