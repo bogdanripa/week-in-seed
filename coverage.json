@@ -2,37 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-08-14",
-      "title": "The Week in Seed: Someone Has to Cool AI Down and Keep Its Lights On",
-      "themes": [
-        "Seed money is starting to pay AI's own utility bill",
-        "AI's arms race is finally funding the defense side, not just the offense",
-        "A drone interceptor got a pre-seed check before it had a disclosed check size"
-      ],
-      "companies": [
-        {
-          "name": "Discovered Materials",
-          "round": "$9M seed (led by Lightspeed India Partners)",
-          "theme": "Seed money is starting to pay AI's own utility bill"
-        },
-        {
-          "name": "Reservoir",
-          "round": "$8M seed (led by Asymmetric Capital Partners)",
-          "theme": "Seed money is starting to pay AI's own utility bill"
-        },
-        {
-          "name": "Corma",
-          "round": "$60M seed (led by Sequoia Capital)",
-          "theme": "AI's arms race is finally funding the defense side, not just the offense"
-        },
-        {
-          "name": "KshatraLabs",
-          "round": "pre-seed, amount not disclosed (led by Finvolve and India Accelerator)",
-          "theme": "A drone interceptor got a pre-seed check before it had a disclosed check size"
-        }
-      ]
-    },
-    {
       "date": "2026-08-21",
       "title": "The Week in Seed: The Checks Went to Whoever Already Had a Way In",
       "themes": [
@@ -385,6 +354,36 @@
           "name": "ALLOX",
           "round": "$10.5M seed (led by Asabys)",
           "theme": "Drug discovery's seed bet is on generating the data, not tuning the model"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "The Week in Seed: Two Ways to Beat an Incumbent — Charge by the Result, or Build It for a Fraction of the Price",
+      "themes": [
+        "Defense is being rebuilt by alumni of the primes, aimed at what the primes price out",
+        "AI services firms are being priced on the result, not the hour"
+      ],
+      "companies": [
+        {
+          "name": "Gallium Defense",
+          "round": "€7.1M seed (led by Keen Venture Partners and 360 Capital)",
+          "theme": "Defense is being rebuilt by alumni of the primes, aimed at what the primes price out"
+        },
+        {
+          "name": "Corridian",
+          "round": "$38M seed (led by Point72 Ventures)",
+          "theme": "Defense is being rebuilt by alumni of the primes, aimed at what the primes price out"
+        },
+        {
+          "name": "Clark",
+          "round": "$11M seed (led by Touring Capital)",
+          "theme": "AI services firms are being priced on the result, not the hour"
+        },
+        {
+          "name": "Athena",
+          "round": "$2.5M pre-seed (led by a16z Speedrun)",
+          "theme": "AI services firms are being priced on the result, not the hour"
         }
       ]
     }
