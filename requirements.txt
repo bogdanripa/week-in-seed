@@ -1,3 +1,4 @@
 anthropic>=0.40.0
 python-substack==0.1.25  # unofficial client on internal endpoints — pinned; publish.py matches this version's Post.add API
 matplotlib>=3.8  # abstract-art header fallback; brings Pillow for the photo pipeline
+Pillow>=10.3  # explicit: a distro-provided Pillow (e.g. Debian 10.2 with no _imaging for this interpreter) can satisfy matplotlib yet fail to import
