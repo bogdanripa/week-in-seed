@@ -2,42 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-08-21",
-      "title": "The Week in Seed: The Checks Went to Whoever Already Had a Way In",
-      "themes": [
-        "Defense tech's frontier moved to where the primes don't go",
-        "Healthcare AI's seed money went to the access layer, not the assistant",
-        "Enterprise connectivity found a workaround instead of a rebuild"
-      ],
-      "companies": [
-        {
-          "name": "Terra Industries",
-          "round": "$52M seed (led by 8VC)",
-          "theme": "Defense tech's frontier moved to where the primes don't go"
-        },
-        {
-          "name": "Seitec",
-          "round": "AUS$4M seed (led by ACTivate Capital)",
-          "theme": "Defense tech's frontier moved to where the primes don't go"
-        },
-        {
-          "name": "Tross",
-          "round": "pre-seed, amount not disclosed (led by All In Capital)",
-          "theme": "Healthcare AI's seed money went to the access layer, not the assistant"
-        },
-        {
-          "name": "Aisel Health",
-          "round": "€1.7M pre-seed (led by Caesar Ventures)",
-          "theme": "Healthcare AI's seed money went to the access layer, not the assistant"
-        },
-        {
-          "name": "InfiniG",
-          "round": "$5.2M seed (co-led by J2 Ventures and Stormbreaker Ventures)",
-          "theme": "Enterprise connectivity found a workaround instead of a rebuild"
-        }
-      ]
-    },
-    {
       "date": "2026-08-28",
       "title": "The Week in Seed: The Robots Didn't Get the Money — the Reactor, the Router and the Simulator Did",
       "themes": [
@@ -384,6 +348,42 @@
           "name": "Athena",
           "round": "$2.5M pre-seed (led by a16z Speedrun)",
           "theme": "AI services firms are being priced on the result, not the hour"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "title": "The Week in Seed: The Biggest Checks Went to Factories, Not Models",
+      "themes": [
+        "Industrial capacity is the scarce input, and seed rounds are now priced like it",
+        "The agent era's insurance policy: prove who's human, and be able to rewind",
+        "The incumbents are buying the AI that was supposed to replace them"
+      ],
+      "companies": [
+        {
+          "name": "Nidus",
+          "round": "$30M pre-seed and seed (seed led by Kleiner Perkins; pre-seed led by Costanoa)",
+          "theme": "Industrial capacity is the scarce input, and seed rounds are now priced like it"
+        },
+        {
+          "name": "Mavria",
+          "round": "$130M across pre-seed and seed at a $1B valuation (latest round led by Paradigm)",
+          "theme": "Industrial capacity is the scarce input, and seed rounds are now priced like it"
+        },
+        {
+          "name": "Dreeze",
+          "round": "$33M seed (co-led by Norwest and Bessemer Venture Partners)",
+          "theme": "The agent era's insurance policy: prove who's human, and be able to rewind"
+        },
+        {
+          "name": "Helix",
+          "round": "$6.2M pre-seed (led by Chicago Ventures)",
+          "theme": "The agent era's insurance policy: prove who's human, and be able to rewind"
+        },
+        {
+          "name": "Sumary",
+          "round": "$25M seed (led by Singular)",
+          "theme": "The incumbents are buying the AI that was supposed to replace them"
         }
       ]
     }
