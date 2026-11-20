@@ -2,41 +2,6 @@
   "max_issues": 12,
   "issues": [
     {
-      "date": "2026-08-28",
-      "title": "The Week in Seed: The Robots Didn't Get the Money — the Reactor, the Router and the Simulator Did",
-      "themes": [
-        "Physical AI's biggest checks went to power, compute and training — not to a single robot",
-        "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
-      ],
-      "companies": [
-        {
-          "name": "Apollo Atomics",
-          "round": "$31M seed (led by FCVC)",
-          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
-        },
-        {
-          "name": "Callosum",
-          "round": "$100M seed (led by Atomico)",
-          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
-        },
-        {
-          "name": "Veeda",
-          "round": "$90M seed (co-led by Khosla Ventures and Radical Ventures)",
-          "theme": "Physical AI's biggest checks went to power, compute and training — not to a single robot"
-        },
-        {
-          "name": "Repodo",
-          "round": "€8.2M pre-seed (led by Hedosophia and Seed Capital)",
-          "theme": "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
-        },
-        {
-          "name": "Itoflow",
-          "round": "$2.5M pre-seed (led by Balderton Capital)",
-          "theme": "AI-native challengers are rebuilding licensed professional work from scratch, not bolting AI onto it"
-        }
-      ]
-    },
-    {
       "date": "2026-09-04",
       "title": "The Week in Seed: The Biggest Checks Went to Keeping AI Safe and Powered",
       "themes": [
@@ -384,6 +349,42 @@
           "name": "Sumary",
           "round": "$25M seed (led by Singular)",
           "theme": "The incumbents are buying the AI that was supposed to replace them"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "title": "The Week in Seed: Seed Money Went to Owning the Hard Part, Not Renting It",
+      "themes": [
+        "Autonomous weapons need a referee before they get a budget",
+        "Enterprises want to own the model and the input, not rent the answer",
+        "The AI-native firm goes straight to the consumer"
+      ],
+      "companies": [
+        {
+          "name": "Valkryn",
+          "round": "$15M seed (led by a16z American Dynamism)",
+          "theme": "Autonomous weapons need a referee before they get a budget"
+        },
+        {
+          "name": "Odin Dynamics",
+          "round": "$13.75M seed (Freestyle VC, BlueYard Capital and Sierra Ventures; lead not named in the primary report)",
+          "theme": "Autonomous weapons need a referee before they get a budget"
+        },
+        {
+          "name": "Remanence",
+          "round": "$30M seed (co-led by EQT Ventures and FirstMark)",
+          "theme": "Enterprises want to own the model and the input, not rent the answer"
+        },
+        {
+          "name": "Unsiloed AI",
+          "round": "$7.5M seed (led by Felicis)",
+          "theme": "Enterprises want to own the model and the input, not rent the answer"
+        },
+        {
+          "name": "Alecto",
+          "round": "$20M (£15M) seed (led by Insight Partners)",
+          "theme": "The AI-native firm goes straight to the consumer"
         }
       ]
     }
