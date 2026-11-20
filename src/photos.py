@@ -38,24 +38,26 @@ def _get(url: str, timeout: int = 30) -> bytes:
 def search_photo(query: str, min_width: int = 1100) -> dict:
     """Return the best Openverse result for `query` (a concrete, photographable
     real-world scene — 'container ship port cranes', not 'innovation')."""
-    params = urllib.parse.urlencode({
-        "q": query,
-        "license": "pdm,cc0,by",
-        "category": "photograph",
-        "aspect_ratio": "wide",
-        "size": "large",
-        "page_size": "20",
-    })
-    try:
-        data = json.loads(_get(f"{API}?{params}"))
-    except (urllib.error.URLError, OSError, ValueError) as e:
-        raise PhotoError(f"Openverse search failed: {e}") from e
-
-    candidates = [
-        r for r in data.get("results", [])
-        if (r.get("width") or 0) >= min_width and r.get("url")
-        and r.get("license") in _LICENSE_RANK
-    ]
+    base = {"q": query, "license": "pdm,cc0,by", "page_size": "20"}
+    # Openverse's category/aspect/size metadata is sparse, so the strict
+    # filters often return nothing for specific queries; retry without them
+    # (min_width, the landscape check and the center-crop still guarantee a
+    # usable header — the routine eyeballs the result either way).
+    candidates = []
+    for extra in ({"category": "photograph", "aspect_ratio": "wide", "size": "large"}, {}):
+        params = urllib.parse.urlencode({**base, **extra})
+        try:
+            data = json.loads(_get(f"{API}?{params}"))
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            raise PhotoError(f"Openverse search failed: {e}") from e
+        candidates = [
+            r for r in data.get("results", [])
+            if (r.get("width") or 0) >= min_width and r.get("url")
+            and r.get("license") in _LICENSE_RANK
+            and (r.get("height") or 0) and r["width"] / r["height"] >= 1.2
+        ]
+        if candidates:
+            break
     if not candidates:
         raise PhotoError(f"no usable Openverse results for query {query!r}")
     # freest license first; within a license, highest resolution
